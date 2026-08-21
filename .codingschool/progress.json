@@ -1,0 +1,66 @@
+{
+  "topics": {
+    "Android development dengan Kotlin": {
+      "name": "Android development dengan Kotlin",
+      "percent": 100,
+      "theory": [
+        "Jetpack Compose Dasar",
+        "Layout Compose & Material 3",
+        "Proyek 1: Kalkulator Tip 🚀",
+        "LazyColumn & List",
+        "Activity, Fragment & ViewBinding",
+        "RecyclerView & Adapter",
+        "Proyek 3: Layar Profil XML"
+      ],
+      "practice": [],
+      "quizzes": [],
+      "completedTheory": [
+        "Jetpack Compose Dasar",
+        "Layout Compose & Material 3",
+        "Proyek 1: Kalkulator Tip 🚀",
+        "LazyColumn & List",
+        "Activity, Fragment & ViewBinding",
+        "RecyclerView & Adapter",
+        "Proyek 3: Layar Profil XML"
+      ],
+      "completedPractice": [],
+      "currentBloomStage": null
+    },
+    "android development dengan kotlin": {
+      "name": "android development dengan kotlin",
+      "percent": 100,
+      "theory": [
+        "Navigation Compose",
+        "Proyek 2: To-Do List",
+        "View System & XML Layout",
+        "ViewModel & MVVM",
+        "Coroutines & Flow",
+        "Separation of Concerns & Clean Architecture",
+        "Design Patterns Android"
+      ],
+      "completedTheory": [
+        "Navigation Compose",
+        "Proyek 2: To-Do List",
+        "View System & XML Layout",
+        "ViewModel & MVVM",
+        "Coroutines & Flow",
+        "Separation of Concerns & Clean Architecture",
+        "Design Patterns Android"
+      ],
+      "practice": [],
+      "completedPractice": [],
+      "quizzes": [],
+      "currentBloomStage": null,
+      "lastCompletedItem": "Design Patterns Android",
+      "currentItem": null
+    }
+  },
+  "global": {
+    "softwareEngineering": 100,
+    "knowledge": 100,
+    "practice": 100,
+    "architecture": 50
+  },
+  "xp": 750,
+  "level": 1
+}

@@ -1,0 +1,28 @@
+{
+  "projectName": "ProfilePage",
+  "item": "Fix exported launcher activity (AndroidManifest)",
+  "status": "claimed",
+  "files": [
+    {
+      "path": "ProfilePage/app/src/main/AndroidManifest.xml",
+      "existed": false
+    }
+  ],
+  "attempts": 0,
+  "openedAt": "2026-08-15T09:57:56.317Z",
+  "qaHistory": [
+    {
+      "answer": "Aturan permanen bahwa activity yang menjalankan main dan launcher harus exported true",
+      "question": "Mengapa activity launcher wajib exported=true?",
+      "score": "correct"
+    },
+    {
+      "answer": "Verifikasi end-to-end: build sukses, install sukses, am start tanpa exception, ProfileActivity tampil di perangkat (topResumedActivity)",
+      "question": "Apakah app berhasil dijalankan di perangkat setelah fix?",
+      "score": "correct"
+    }
+  ],
+  "confidence": 100,
+  "successLevel": "junior",
+  "resolvedAt": "2026-08-15T09:58:31.361Z"
+}

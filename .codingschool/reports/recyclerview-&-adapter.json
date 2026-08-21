@@ -1,0 +1,17 @@
+{
+  "assessments": [
+    {
+      "date": "2026-08-13T05:58:29.201Z",
+      "rubric": {
+        "theory": 60,
+        "logic": 70,
+        "coding": 80,
+        "communication": 65,
+        "bestPractice": 55,
+        "total": 66,
+        "weakness": "Lacks technical terms and comparisons. Use more specific vocabulary about RecyclerView & Adapter.",
+        "feedback": "Understanding needs more depth. Re-read RecyclerView & Adapter concepts and connect with real examples."
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "currentPhase": "teach",
+  "teacher": {
+    "misconceptions": [],
+    "successfulHintLevel": 1,
+    "activeTopic": "Design Patterns Android",
+    "lastDiagnosedAt": "2026-08-20T22:21:27.298Z"
+  },
+  "coach": {
+    "weakDimensions": [
+      "architecture thinking",
+      "git process",
+      "testing mindset",
+      "GRC awareness",
+      "collaboration",
+      "risk assessment",
+      "code quality",
+      "documentation"
+    ],
+    "skillGaps": [
+      "error handling",
+      "type safety"
+    ],
+    "lastReviewAt": "2026-08-15T09:32:21.416Z",
+    "lastClaimLevel": "junior",
+    "readiness": "junior"
+  },
+  "updatedAt": "2026-08-20T22:21:27.298Z",
+  "activeTopic": "Design Patterns Android"
+}

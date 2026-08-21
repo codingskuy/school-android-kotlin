@@ -1,0 +1,38 @@
+{
+  "teacher": {
+    "diagnosedTopics": [
+      "Android development dengan Kotlin",
+      "View System & XML Layout (Android)",
+      "ViewModel & MVVM",
+      "Coroutines & Flow",
+      "Separation of Concerns & Clean Architecture",
+      "Design Patterns Android"
+    ],
+    "roadmapTopics": [
+      "Android development dengan Kotlin"
+    ],
+    "taughtTopics": [
+      "Android development dengan Kotlin",
+      "View System & XML Layout (Android)",
+      "ViewModel & MVVM",
+      "Clean Architecture"
+    ],
+    "assessedTopics": [
+      "RecyclerView & Adapter"
+    ]
+  },
+  "coach": {
+    "timelineInit": true,
+    "claimItems": {
+      "RecyclerView & Adapter (ProfileAdapter)": "open",
+      "ProfileAdapter (3 override wajib)": "closed",
+      "Wiring adapter di ProfileActivity": "closed",
+      "Fix JDK untuk build (gradle.properties)": "closed",
+      "Fix core-ktx version (kompatibilitas compileSdk)": "closed",
+      "Fix implicit parent style (ShapeAppearance)": "closed",
+      "Fix exported launcher activity (AndroidManifest)": "closed"
+    }
+  },
+  "lastTool": "cs_update_competency",
+  "updatedAt": "2026-08-21T02:29:19.214Z"
+}

@@ -1,0 +1,40 @@
+{
+  "topics": {
+    "Android development dengan Kotlin": {
+      "knowledge": 86,
+      "implementation": 88,
+      "debugging": 86,
+      "teaching": 72
+    },
+    "android development dengan kotlin": {
+      "knowledge": 78,
+      "implementation": 62,
+      "debugging": 52,
+      "teaching": 68
+    },
+    "RecyclerView & Adapter": {
+      "knowledge": 75,
+      "implementation": 70,
+      "debugging": 65,
+      "teaching": 70
+    },
+    "ViewModel & MVVM": {
+      "knowledge": 85,
+      "implementation": 75,
+      "debugging": 68,
+      "teaching": 80
+    },
+    "Coroutines & Flow": {
+      "knowledge": 72,
+      "implementation": 70,
+      "debugging": 65,
+      "teaching": 68
+    },
+    "Separation of Concerns & Clean Architecture": {
+      "knowledge": 62,
+      "implementation": 50,
+      "debugging": 45,
+      "teaching": 58
+    }
+  }
+}

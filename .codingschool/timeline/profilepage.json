@@ -1,0 +1,107 @@
+{
+  "projectName": "ProfilePage",
+  "description": "Aplikasi Android profil pribadi sederhana dengan RecyclerView — belajar arsitektur View + Adapter + ViewBinding, dari data class sampai rendering list.",
+  "techStack": [
+    "Kotlin",
+    "Android Views (XML)",
+    "RecyclerView",
+    "ViewBinding",
+    "Data Binding (item binding)",
+    "Gradle Kotlin DSL"
+  ],
+  "milestones": [
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "name": "Fondasi Proyek",
+      "status": "todo",
+      "sprints": [
+        {
+          "name": "Sprint 1: Setup & Data Model",
+          "status": "todo",
+          "epics": [
+            {
+              "name": "Epic: Data Model",
+              "status": "todo",
+              "tasks": [
+                {
+                  "name": "Task: Data class ProfileItem",
+                  "status": "done",
+                  "notes": "File ProfileItem.kt sudah ada: data class(id, title, icon). Sudah diverifikasi."
+                },
+                {
+                  "name": "Task: Layout item_profile.xml (ViewBinding)",
+                  "status": "done",
+                  "notes": "Layout item dengan <data> variable ProfileItem + ViewBinding ItemProfileBinding. Sudah diverifikasi."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RecyclerView Adapter",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 2: RecyclerView & Adapter",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Epic: Adapter & List UI",
+              "status": "done",
+              "tasks": [
+                {
+                  "name": "Task: ProfileAdapter (3 override wajib)",
+                  "status": "done",
+                  "notes": "Claim PASS di level junior (confidence 73/100). User paham kontrak position vs items.size dan perilaku emptyList."
+                },
+                {
+                  "name": "Task: Wiring adapter di ProfileActivity",
+                  "status": "done",
+                  "notes": "Claim PASS (level junior). Setup profileItems → LinearLayoutManager → ProfileAdapter. User paham beda lupa layoutManager (crash) vs lupa adapter (kosong, aman)."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Integrasi Review",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 3: Integrasi & Review",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Epic: Integrasi & Review",
+              "status": "done",
+              "tasks": [
+                {
+                  "name": "Task: Review & GRC scan",
+                  "status": "done",
+                  "notes": "Review + GRC (low risk) selesai. Bonus sesi: 4 error lingkungan berhasil di-debug (JDK/jlink, core-ktx/compileSdk, implicit parent style, exported launcher). App terverifikasi berjalan di perangkat."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-08-15T08:45:39.473Z",
+  "updatedAt": "2026-08-15T09:58:36.872Z"
+}
