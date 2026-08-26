@@ -412,3 +412,65 @@ Debug lessons:
 **Progress:** 100% complete
 
 ---
+## 2026-08-26 15:48:12
+
+**Topic:** Proyek 4: Refactor To-Do List 🚀
+
+**Theory:**
+Refactor adalah mengubah struktur kode tanpa mengubah fungsionalitasnya. Clean Architecture yang konsisten: setiap layer hanya tahu layer di bawahnya.
+
+**Yang dikerjakan:**
+1. TaskFormatter dipindah dari presentation/utils → domain/usecase/TaskFormatterUseCase.kt (transformasi data = bisnis logic)
+2. Hardcoded Intent switching di MainActivity dihapus (dead code dari Proyek 3)
+3. onItemTask dibiarkan kosong dengan TODO comment sebagai technical debt tracker
+
+**Pemahaman yang dibuktikan:**
+- Clean Architecture dependency direction (domain ↔ presentation)
+- @Singleton vs non-Singleton (state vs stateless objects)
+- Preview sebagai development tool (pengecualian DI rules)
+- Hardcoded navigation = bad practice (fragile code)
+- TODO comment sebagai technical debt tracker
+
+**Arsitektur final:**
+- data/repositories/ → TaskRepositoryImpl (Singleton)
+- di/ → AppModule (Hilt providers)
+- domain/model/ → Task data class
+- domain/repositories/ → TaskRepository interface
+- domain/usecase/ → 5 Use Cases
+- presentation/viewmodel/ → ToDoViewModel (Hilt inject)
+- presentation/ → Composable screens
+
+**Progress:** 100% complete
+
+---
+## 2026-08-26 15:49:53
+
+**Topic:** Proyek 4: Refactor To-Do List
+
+**Theory:**
+Refactor adalah mengubah struktur kode tanpa mengubah fungsionalitasnya. Clean Architecture yang konsisten: setiap layer hanya tahu layer di bawahnya.
+
+**Yang dikerjakan:**
+1. TaskFormatter dipindah dari presentation/utils → domain/usecase/TaskFormatterUseCase.kt (transformasi data = bisnis logic)
+2. Hardcoded Intent switching di MainActivity dihapus (dead code dari Proyek 3)
+3. onItemTask dibiarkan kosong dengan TODO comment sebagai technical debt tracker
+
+**Pemahaman yang dibuktikan:**
+- Clean Architecture dependency direction (domain ↔ presentation)
+- @Singleton vs non-Singleton (state vs stateless objects)
+- Preview sebagai development tool (pengecualian DI rules)
+- Hardcoded navigation = bad practice (fragile code)
+- TODO comment sebagai technical debt tracker
+
+**Arsitektur final:**
+- data/repositories/ → TaskRepositoryImpl (Singleton)
+- di/ → AppModule (Hilt providers)
+- domain/model/ → Task data class
+- domain/repositories/ → TaskRepository interface
+- domain/usecase/ → 5 Use Cases
+- presentation/viewmodel/ → ToDoViewModel (Hilt inject)
+- presentation/ → Composable screens
+
+**Progress:** 100% complete
+
+---

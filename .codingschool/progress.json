@@ -37,7 +37,9 @@
         "Coroutines & Flow",
         "Separation of Concerns & Clean Architecture",
         "Design Patterns Android",
-        "Dependency Injection dengan Hilt"
+        "Dependency Injection dengan Hilt",
+        "Proyek 4: Refactor To-Do List 🚀",
+        "Proyek 4: Refactor To-Do List"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -47,13 +49,15 @@
         "Coroutines & Flow",
         "Separation of Concerns & Clean Architecture",
         "Design Patterns Android",
-        "Dependency Injection dengan Hilt"
+        "Dependency Injection dengan Hilt",
+        "Proyek 4: Refactor To-Do List 🚀",
+        "Proyek 4: Refactor To-Do List"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Dependency Injection dengan Hilt",
+      "lastCompletedItem": "Proyek 4: Refactor To-Do List",
       "currentItem": null
     }
   },
@@ -63,6 +67,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 800,
+  "xp": 900,
   "level": 1
 }

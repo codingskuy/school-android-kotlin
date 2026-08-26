@@ -6,7 +6,8 @@
       "ViewModel & MVVM",
       "Coroutines & Flow",
       "Separation of Concerns & Clean Architecture",
-      "Design Patterns Android"
+      "Design Patterns Android",
+      "Android Networking dengan Retrofit"
     ],
     "roadmapTopics": [
       "Android development dengan Kotlin"
@@ -33,9 +34,9 @@
       "Fix exported launcher activity (AndroidManifest)": "closed",
       "TaskFormatter → domain/usecase/TaskFormatterUseCase.kt": "closed",
       "Rename TaskRepository.task → getAllTasks()": "closed",
-      "Hapus hardcoded Intent switching": "open"
+      "Hapus hardcoded Intent switching": "closed"
     }
   },
-  "lastTool": "cs_claim_open",
-  "updatedAt": "2026-08-26T08:38:50.620Z"
+  "lastTool": "cs_init_learning_env",
+  "updatedAt": "2026-08-26T09:10:21.316Z"
 }

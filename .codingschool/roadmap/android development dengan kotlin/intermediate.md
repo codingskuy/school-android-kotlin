@@ -27,7 +27,7 @@ Strategi utama (berdasarkan riset industri 2026):
 - [x] **Separation of Concerns & Clean Architecture** — pecah project jadi layer: UI → Domain → Data. Wajib biar project gampang dirawat & discale.
 - [x] **Design Patterns Android** — Repository, Singleton, Factory. Di mana dan kapan dipakai.
 - [x] **Dependency Injection dengan Hilt** — kelola dependensi otomatis, hilangkan manual wiring.
-- [ ] **Proyek 4: Refactor To-Do List** 🚀 — rombak jadi Clean Architecture + Hilt. Latihan "pindah dari bikin app → engineer".
+- [x] **Proyek 4: Refactor To-Do List** 🚀 — rombak jadi Clean Architecture + Hilt. Latihan "pindah dari bikin app → engineer".
 
 ## 🌐 Tahap 5: Networking — "Aplikasi Cuaca"
 - [ ] **Retrofit & JSON Parsing** — ambil data dari API (API cuaca gratis), parsing JSON ke data class.
