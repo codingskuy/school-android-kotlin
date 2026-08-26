@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.codingskuy.todo.domain.model.Task
+import io.codingskuy.todo.presentation.utils.TaskFormatter
 
 @Composable
 fun TaskListScreen(
@@ -28,7 +29,8 @@ fun TaskListScreen(
     onDelete: (Task) -> Unit,
     tasks: List<Task>,
     onItemTask: (Task) -> Unit,
-    onCheckedChange: (Task) -> Unit
+    onCheckedChange: (Task) -> Unit,
+    formatter: TaskFormatter
 ) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -55,7 +57,7 @@ fun TaskListScreen(
                         outlineStroke = Stroke(),
                     )
                     Text(
-                        text = task.title,
+                        text = formatter.format(task),
                         modifier = Modifier.padding(16.dp),
                         style = MaterialTheme.typography.bodyLarge
                     )
@@ -74,9 +76,11 @@ fun TaskListScreenPreview() {
     _root_ide_package_.io.codingskuy.todo.presentation.theme.ToDoTheme {
         TaskListScreen(
             onAddClick = { },
-            tasks = mutableListOf(),
             onDelete = { },
+            tasks = mutableListOf(),
             onItemTask = {},
-            onCheckedChange = {})
+            formatter = TaskFormatter(),
+            onCheckedChange = {},
+        )
     }
 }

@@ -19,7 +19,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -57,6 +56,7 @@ class MainActivity : ComponentActivity() {
 
                         TaskListScreen(
                             tasks = tasks,
+                            formatter = todoVM.formatter,
                             modifier = Modifier.fillMaxSize(),
                             onAddClick = { navController.navigate("add") },
                             onDelete = { task ->
