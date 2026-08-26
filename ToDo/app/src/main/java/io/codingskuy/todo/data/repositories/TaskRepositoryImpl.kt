@@ -17,7 +17,7 @@ object TaskRepositoryImpl : TaskRepository {
         )
     )
 
-    override val task: StateFlow<List<Task>> = _tasks.asStateFlow()
+    override val tasks: StateFlow<List<Task>> = _tasks.asStateFlow()
 
     override fun addTask(title: String) {
         val newId = (_tasks.value.maxOfOrNull { it.id } ?: 0) + 1

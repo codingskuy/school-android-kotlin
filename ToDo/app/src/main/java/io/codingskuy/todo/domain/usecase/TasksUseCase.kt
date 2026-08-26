@@ -5,7 +5,7 @@ import io.codingskuy.todo.domain.repositories.TaskRepository
 import kotlinx.coroutines.flow.StateFlow
 
 class GetTasksUseCase(private val repository: TaskRepository) {
-    operator fun invoke(): StateFlow<List<Task>> = repository.task
+    operator fun invoke(): StateFlow<List<Task>> = repository.tasks
 }
 
 class DeleteTaskUseCase(private val repository: TaskRepository) {
