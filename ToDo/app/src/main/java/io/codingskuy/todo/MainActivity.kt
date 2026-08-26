@@ -18,10 +18,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
 import io.codingskuy.todo.presentation.AddTaskScreen
 import io.codingskuy.todo.presentation.CobaActivity
 import io.codingskuy.todo.presentation.FragmentActivity
@@ -30,9 +32,9 @@ import io.codingskuy.todo.presentation.TaskListScreen
 import io.codingskuy.todo.presentation.ViewActivity
 import io.codingskuy.todo.presentation.theme.ToDoTheme
 import io.codingskuy.todo.presentation.viewmodel.ToDoViewModel
-import io.codingskuy.todo.presentation.viewmodel.todoViewModelFactory
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +44,7 @@ class MainActivity : ComponentActivity() {
             val context = LocalContext.current
             ToDoTheme {
                 val navController = rememberNavController()
-                val todoVM: ToDoViewModel = viewModel(factory = todoViewModelFactory())
+                val todoVM: ToDoViewModel = hiltViewModel()
                 val tasks by todoVM.tasks.collectAsState()
                 val isSaving by todoVM.isSaving.collectAsState()
 

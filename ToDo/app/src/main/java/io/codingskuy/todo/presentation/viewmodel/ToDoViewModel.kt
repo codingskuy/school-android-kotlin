@@ -4,8 +4,7 @@ package io.codingskuy.todo.presentation.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import io.codingskuy.todo.data.repositories.TaskRepositoryImpl
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.codingskuy.todo.domain.model.Task
 import io.codingskuy.todo.domain.usecase.AddTaskUseCase
 import io.codingskuy.todo.domain.usecase.DeleteTaskUseCase
@@ -15,9 +14,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import javax.inject.Inject
 import kotlin.time.Duration.Companion.milliseconds
 
-class ToDoViewModel(
+@HiltViewModel
+class ToDoViewModel @Inject constructor(
     getTask: GetTasksUseCase,
     private val addTasks: AddTaskUseCase,
     private val deleteTask: DeleteTaskUseCase,
@@ -45,6 +46,9 @@ class ToDoViewModel(
     fun toggleDone(task: Task) = toggleDone(task.id)
 }
 
+
+/// Unused because manual factory builder was replace by hilt injection management
+/*
 fun todoViewModelFactory(): ViewModelProvider.Factory {
     return object : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -56,4 +60,4 @@ fun todoViewModelFactory(): ViewModelProvider.Factory {
             ) as T
         }
     }
-}
+}*/
