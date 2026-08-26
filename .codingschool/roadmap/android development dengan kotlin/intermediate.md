@@ -26,7 +26,7 @@ Strategi utama (berdasarkan riset industri 2026):
 - [x] **Coroutines & Flow** — async programming (kenapa `suspend`, bukan thread).
 - [x] **Separation of Concerns & Clean Architecture** — pecah project jadi layer: UI → Domain → Data. Wajib biar project gampang dirawat & discale.
 - [x] **Design Patterns Android** — Repository, Singleton, Factory. Di mana dan kapan dipakai.
-- [ ] **Dependency Injection dengan Hilt** — kelola dependensi otomatis, hilangkan manual wiring.
+- [x] **Dependency Injection dengan Hilt** — kelola dependensi otomatis, hilangkan manual wiring.
 - [ ] **Proyek 4: Refactor To-Do List** 🚀 — rombak jadi Clean Architecture + Hilt. Latihan "pindah dari bikin app → engineer".
 
 ## 🌐 Tahap 5: Networking — "Aplikasi Cuaca"

@@ -1,5 +1,5 @@
 {
-  "currentPhase": "teach",
+  "currentPhase": "review",
   "teacher": {
     "misconceptions": [],
     "successfulHintLevel": 1,
@@ -22,9 +22,19 @@
       "type safety"
     ],
     "lastReviewAt": "2026-08-15T09:32:21.416Z",
-    "lastClaimLevel": "junior",
-    "readiness": "junior"
+    "lastClaimLevel": "mid",
+    "readiness": "mid",
+    "pendingCapstone": {
+      "topic": "android development dengan kotlin",
+      "items": [
+        "**Proyek 4: Refactor To-Do List** 🚀 — rombak jadi Clean Architecture + Hilt. Latihan \"pindah dari bikin app → engineer\"."
+      ],
+      "ready": true,
+      "type": "phase",
+      "projectName": "Proyek 4: Refactor To-Do List 🚀",
+      "phaseLabel": "Tahap 4"
+    }
   },
-  "updatedAt": "2026-08-20T22:21:27.298Z",
+  "updatedAt": "2026-08-26T08:38:41.228Z",
   "activeTopic": "Design Patterns Android"
 }

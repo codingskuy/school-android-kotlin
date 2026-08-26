@@ -371,3 +371,44 @@ Use Case dengan 2 repository: `class GetTasksWithLogsUseCase(taskRepo, logRepo)`
 **Progress:** 100% complete
 
 ---
+## 2026-08-26 14:45:57
+
+**Topic:** Dependency Injection dengan Hilt
+
+**Theory:**
+Dependency Injection (DI) = teknik memberikan dependency ke kelas dari luar, bukan dibuat sendiri di dalam kelas. Hilt = wrapper Dagger untuk Android — annotation processor yang generate code injection otomatis.
+
+Konsep Dagger:
+- @Inject constructor — "Saya butuh dependency ini"
+- @Provides — "Ini cara buat dependency-nya"
+- @Singleton — "Cuma 1 instance seumur app"
+- @Module — kumpulan @Provides
+- @InstallIn — component hidup kapan (SingletonComponent = seumur app)
+- @HiltViewModel — ViewModel pakai Hilt
+- @AndroidEntryPoint — Activity/Fragment pakai Hilt
+
+Alur kerja: ViewModel minta dependency → Dagger cek AppModule → Dagger buat + kirim dependency → ViewModel terima otomatis.
+
+Composable + Hilt:
+- hilt() function dari hilt-navigation-compose untuk inject langsung ke Composable
+- Preview TIDAK bisa pakai Hilt — harus instance manual
+- Strategi code coverage: Preview (visual, manual instance) → Unit Test (logic, fake instance) → UI Test (integration, Hilt)
+
+**Practice:**
+Setup Hilt: tambah dependencies di libs.versions.toml (hilt 2.59.2, hilt-navigation-compose 1.4.0, ksp 2.2.10-2.0.2), tambah plugins di build.gradle.kts, buat ToDoApplication.kt dengan @HiltAndroidApp, daftar di AndroidManifest.xml.
+
+AppModule di package di/ — berisi @Provides untuk TaskRepository (Singleton), 4 UseCases. @InstallIn(SingletonComponent::class).
+
+ToDoViewModel: @HiltViewModel + @Inject constructor — hapus manual factory, cukup 1 baris hiltViewModel() di Activity.
+
+Debug lessons:
+- KSP version harus match Kotlin version (2.2.10 → 2.2.10-2.0.2)
+- Hilt 2.57.1 tidak compatible AGP 9.x → upgrade ke 2.59.2
+- android.disallowKotlinSourceSets=false untuk KSP + AGP 9 built-in Kotlin
+- compileSdk 37.1 untuk hilt-navigation-compose 1.4.0
+- DuplicateBindings = 2 file Module — hapus salah satu
+- Flow.map() menghasilkan Flow, bukan StateFlow — tambah .stateIn()
+
+**Progress:** 100% complete
+
+---

@@ -36,7 +36,8 @@
         "ViewModel & MVVM",
         "Coroutines & Flow",
         "Separation of Concerns & Clean Architecture",
-        "Design Patterns Android"
+        "Design Patterns Android",
+        "Dependency Injection dengan Hilt"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -45,13 +46,14 @@
         "ViewModel & MVVM",
         "Coroutines & Flow",
         "Separation of Concerns & Clean Architecture",
-        "Design Patterns Android"
+        "Design Patterns Android",
+        "Dependency Injection dengan Hilt"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Design Patterns Android",
+      "lastCompletedItem": "Dependency Injection dengan Hilt",
       "currentItem": null
     }
   },
@@ -61,6 +63,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 750,
+  "xp": 800,
   "level": 1
 }

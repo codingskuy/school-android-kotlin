@@ -30,9 +30,12 @@
       "Fix JDK untuk build (gradle.properties)": "closed",
       "Fix core-ktx version (kompatibilitas compileSdk)": "closed",
       "Fix implicit parent style (ShapeAppearance)": "closed",
-      "Fix exported launcher activity (AndroidManifest)": "closed"
+      "Fix exported launcher activity (AndroidManifest)": "closed",
+      "TaskFormatter → domain/usecase/TaskFormatterUseCase.kt": "closed",
+      "Rename TaskRepository.task → getAllTasks()": "closed",
+      "Hapus hardcoded Intent switching": "open"
     }
   },
-  "lastTool": "cs_update_competency",
-  "updatedAt": "2026-08-21T02:29:19.214Z"
+  "lastTool": "cs_claim_open",
+  "updatedAt": "2026-08-26T08:38:50.620Z"
 }
