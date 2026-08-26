@@ -9,8 +9,8 @@ import io.codingskuy.todo.domain.repositories.TaskRepository
 import io.codingskuy.todo.domain.usecase.AddTaskUseCase
 import io.codingskuy.todo.domain.usecase.DeleteTaskUseCase
 import io.codingskuy.todo.domain.usecase.GetTasksUseCase
+import io.codingskuy.todo.domain.usecase.TaskFormatterUseCase
 import io.codingskuy.todo.domain.usecase.ToggleDoneUseCase
-import io.codingskuy.todo.presentation.utils.TaskFormatter
 import javax.inject.Singleton
 
 @Module
@@ -34,5 +34,5 @@ object AppModule {
     fun provideToggleDoneUseCase(repository: TaskRepository) = ToggleDoneUseCase(repository)
 
     @Provides
-    fun provideTaskFormatter() = TaskFormatter()
+    fun provideTaskFormatter() = TaskFormatterUseCase()
 }
