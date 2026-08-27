@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">weather-app</string>
+    <string name="title_activity_weather_screen">WeatherScreen</string>
+</resources>
