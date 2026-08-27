@@ -39,7 +39,9 @@
         "Design Patterns Android",
         "Dependency Injection dengan Hilt",
         "Proyek 4: Refactor To-Do List 🚀",
-        "Proyek 4: Refactor To-Do List"
+        "Proyek 4: Refactor To-Do List",
+        "Retrofit & JSON Parsing",
+        "State Management untuk API"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -51,13 +53,15 @@
         "Design Patterns Android",
         "Dependency Injection dengan Hilt",
         "Proyek 4: Refactor To-Do List 🚀",
-        "Proyek 4: Refactor To-Do List"
+        "Proyek 4: Refactor To-Do List",
+        "Retrofit & JSON Parsing",
+        "State Management untuk API"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Proyek 4: Refactor To-Do List",
+      "lastCompletedItem": "State Management untuk API",
       "currentItem": null
     }
   },
@@ -67,6 +71,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 900,
-  "level": 1
+  "xp": 1000,
+  "level": 2
 }

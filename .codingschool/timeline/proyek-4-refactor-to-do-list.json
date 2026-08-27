@@ -1,0 +1,108 @@
+{
+  "projectName": "Proyek 4: Refactor To-Do List",
+  "description": "Rombak ToDo app supaya Clean Architecture-nya konsisten: pindah TaskFormatter ke domain layer, perbaiki nama repository, bersihkan dead code di MainActivity, dan pastikan semua layer terhubung dengan benar.",
+  "techStack": [
+    "Kotlin",
+    "Jetpack Compose",
+    "Hilt",
+    "Clean Architecture"
+  ],
+  "milestones": [
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "name": "Milestone 1: Domain Layer Cleanup",
+      "status": "todo",
+      "sprints": [
+        {
+          "name": "Sprint 1: Pindah TaskFormatter ke Domain Layer",
+          "status": "done",
+          "epics": [
+            {
+              "name": "TaskFormatter → domain/usecase/TaskFormatterUseCase.kt",
+              "status": "done",
+              "tasks": []
+            },
+            {
+              "name": "Update imports di ViewModel, Composable, AppModule",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        },
+        {
+          "name": "Sprint 2: Perbaiki Naming Repository",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Rename TaskRepository.task → getAllTasks()",
+              "status": "done",
+              "tasks": []
+            },
+            {
+              "name": "Update semua referensi ke task property",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Milestone 2: Presentation Layer Cleanup",
+      "status": "todo",
+      "sprints": [
+        {
+          "name": "Sprint 3: Bersihkan Dead Code di MainActivity",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Hapus hardcoded Intent switching",
+              "status": "done",
+              "tasks": []
+            },
+            {
+              "name": "Perjelas tanggung jawab MainActivity vs Composable",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Milestone 3: Final Review",
+      "status": "todo",
+      "sprints": [
+        {
+          "name": "Sprint 4: Final Review",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Code review & verifikasi build",
+              "status": "done",
+              "tasks": []
+            },
+            {
+              "name": "Tulis handbook & update competency",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-08-26T08:13:57.068Z",
+  "updatedAt": "2026-08-26T08:45:36.309Z"
+}

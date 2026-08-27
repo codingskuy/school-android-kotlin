@@ -1,0 +1,28 @@
+{
+  "projectName": "Proyek 4: Refactor To-Do List",
+  "item": "Hapus hardcoded Intent switching",
+  "status": "claimed",
+  "files": [
+    {
+      "path": "ToDo/app/src/main/java/io/codingskuy/todo/MainActivity.kt",
+      "existed": false
+    }
+  ],
+  "attempts": 0,
+  "openedAt": "2026-08-26T08:38:50.620Z",
+  "qaHistory": [
+    {
+      "answer": "pada level production harusnya navigasi sudah di desain matang-matang, jadi sebaiknya pada proses belajar hardcode seperti ini mulai disiplin untuk tidak dituliskan saja jika belum didesain",
+      "question": "Mengapa hardcoded Intent switching berdasarkan task ID itu bad practice?",
+      "score": "correct"
+    },
+    {
+      "answer": "TODO komen bisa menginformasikan sebagai debt code yang bisa dijadikan delivery task untuk next coding activity atau other programmer nantinya",
+      "question": "Mengapa onItemTask dibiarkan kosong (/* TODO */) bukan dihapus total dari parameter Composable?",
+      "score": "correct"
+    }
+  ],
+  "confidence": 100,
+  "successLevel": "mid",
+  "resolvedAt": "2026-08-26T08:43:49.587Z"
+}

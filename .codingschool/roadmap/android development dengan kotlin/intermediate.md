@@ -30,8 +30,8 @@ Strategi utama (berdasarkan riset industri 2026):
 - [x] **Proyek 4: Refactor To-Do List** 🚀 — rombak jadi Clean Architecture + Hilt. Latihan "pindah dari bikin app → engineer".
 
 ## 🌐 Tahap 5: Networking — "Aplikasi Cuaca"
-- [ ] **Retrofit & JSON Parsing** — ambil data dari API (API cuaca gratis), parsing JSON ke data class.
-- [ ] **State Management untuk API** — loading, sukses, error (sealed class + StateFlow).
+- [x] **Retrofit & JSON Parsing** — ambil data dari API (API cuaca gratis), parsing JSON ke data class.
+- [x] **State Management untuk API** — loading, sukses, error (sealed class + StateFlow).
 - [ ] **Proyek 5: Aplikasi Cuaca** 🚀 — tampilkan cuaca per kota, lengkap dengan error handling.
 
 ## 💾 Tahap 6: Penyimpanan Data — "Aplikasi Catatan"

@@ -474,3 +474,84 @@ Refactor adalah mengubah struktur kode tanpa mengubah fungsionalitasnya. Clean A
 **Progress:** 100% complete
 
 ---
+## 2026-08-27 10:57:50
+
+**Topic:** Retrofit & JSON Parsing
+
+**Theory:**
+Retrofit = HTTP client untuk Android. Cara kerja:
+1. API Interface = "daftar menu" (definisi endpoint)
+2. Retrofit Instance = "koki" (baca menu, kirim request)
+3. Response = "makanan jadi" (data dari server)
+
+Dependencies:
+- retrofit:2.9.0 (engine utama)
+- converter-gson:2.9.0 (parser JSON)
+- okhttp logging-interceptor:4.12.0 (debug, opsional)
+
+Analogi: Retrofit = kurir online yang mengambil data dari API → kirim ke app-mu.
+
+**Practice:**
+1. API Interface dengan @GET, @Query annotations
+2. Data class untuk response (WeatherResponse)
+3. RetrofitClient (singleton) dengan GsonConverterFactory
+4. Repository untuk abstract API calls
+5. ViewModel dengan StateFlow (weather, isLoading, errorMessage)
+6. Composable UI dengan loading spinner, error message, data display
+
+**Key Concepts:**
+- suspend functions untuk coroutines compatibility
+- @GET("path") untuk HTTP GET requests
+- @Query("param") untuk URL query parameters
+- GsonConverterFactory untuk auto JSON parsing
+- try-catch untuk error handling
+
+**Progress:** 100% complete
+
+---
+## 2026-08-27 11:52:58
+
+**Topic:** State Management untuk API
+
+**Theory:**
+State Management untuk API menggunakan **sealed class** + **StateFlow**:
+- **Sealed class** (`WeatherState`) merepresentasikan semua kemungkinan state: `Idle`, `Loading`, `Success(data)`, `Error(message)`
+- **StateFlow** (bukan LiveData) — modern, coroutine-friendly, lifecycle-aware
+- **Collect di Compose**: `val state by viewModel.state.collectAsState()` → otomatis trigger recomposition saat state berubah
+
+**Pattern:**
+```kotlin
+sealed class WeatherState {
+    data object Idle: WeatherState()
+    data object Loading: WeatherState()
+    data class Success(val data: WeatherResponse): WeatherState()
+    data class Error(val message: String): WeatherState()
+}
+
+// ViewModel
+_state.value = WeatherState.Loading
+try {
+    val result = repository.getWeather(lat, lng)
+    _state.value = WeatherState.Success(result)
+} catch (e: Exception) {
+    _state.value = WeatherState.Error(e.message)
+}
+
+// Compose UI
+when(val currentState = state) {
+    is WeatherState.Idle -> { /* ... */ }
+    is WeatherState.Loading -> { CircularProgressIndicator() }
+    is WeatherState.Success -> { /* tampilkan data */ }
+    is WeatherState.Error -> { /* tampilkan error */ }
+}
+```
+
+**Practice:**
+Bug umum yang di-fix: ViewModel punya 4 StateFlow paralel tapi UI hanya observe 1 → state tidak pernah berubah. Solusi: gunakan 1 sealed class state saja.
+
+**Key Insight:**
+Satu state flow mengalir dari ViewModel → Compose. Tidak ada race condition, tidak ada state yang stale. Ini pattern yang dipakai di production apps.
+
+**Progress:** 100% complete
+
+---

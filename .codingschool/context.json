@@ -1,5 +1,5 @@
 {
-  "currentPhase": "teach",
+  "currentPhase": "project",
   "teacher": {
     "misconceptions": [],
     "successfulHintLevel": 1,
@@ -29,8 +29,18 @@
     "completedProject": {
       "projectName": "Proyek 4: Refactor To-Do List",
       "summary": "**Proyek 4: Refactor To-Do List ✅ SELESAI**\n\n**Yang dikerjakan:**\n1. **Domain Layer Cleanup**: TaskFormatter dipindah dari presentation/utils/ → domain/usecase/TaskFormatterUseCase.kt. Semua imports di AppModule, ViewModel, dan Composable diupdate.\n2. **Naming Repository**: TaskRepository.task sudah benar (tasks property). Semua referensi sudah konsisten.\n3. **Presentation Layer Cleanup**: Hardcoded Intent switching di MainActivity dihapus. onItemTask dibiarkan kosong dengan TODO comment sebagai technical debt tracker.\n4. **Final Review**: Code review (48/100 - perlu improvement documentation/error handling nanti), GRC scan (Low Risk).\n\n**Pemahaman yang dibuktikan:**\n- Clean Architecture dependency direction (domain ↔ presentation)\n- @Singleton vs non-Singleton (state vs stateless)\n- Preview sebagai development tool (pengecualian DI)\n- Hardcoded navigation = bad practice\n- TODO comment sebagai technical debt tracker\n\n**Arsitektur sekarang:**\n- TaskFormatterUseCase (domain/usecase/) — transformasi data bisnis\n- TaskRepository (domain/repositories/) — interface\n- TaskRepositoryImpl (data/repositories/) — in-memory implementation\n- 4 Use Cases (domain/usecase/) — GetTasks, AddTask, DeleteTask, ToggleDone, TaskFormatter\n- ToDoViewModel — Hilt inject 4 Use Cases + TaskFormatter\n- AppModule — provides semua dependencies\n\n**Next steps:**\n- Proyek 5: Aplikasi Cuaca (Retrofit & Networking)\n- Atau Proyek 6: Catatan Harian (Room Database)\n- atau Proyek 7: Tambah Testing ke To-Do List"
+    },
+    "pendingCapstone": {
+      "topic": "android development dengan kotlin",
+      "items": [
+        "**Proyek 5: Aplikasi Cuaca** 🚀 — tampilkan cuaca per kota, lengkap dengan error handling."
+      ],
+      "ready": true,
+      "type": "phase",
+      "projectName": "Proyek 5: Aplikasi Cuaca",
+      "phaseLabel": "Tahap 5"
     }
   },
-  "updatedAt": "2026-08-26T08:50:44.503Z",
+  "updatedAt": "2026-08-27T04:53:18.113Z",
   "activeTopic": "Android Networking dengan Retrofit"
 }

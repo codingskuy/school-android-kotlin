@@ -16,7 +16,8 @@
       "Android development dengan Kotlin",
       "View System & XML Layout (Android)",
       "ViewModel & MVVM",
-      "Clean Architecture"
+      "Clean Architecture",
+      "Android Networking dengan Retrofit"
     ],
     "assessedTopics": [
       "RecyclerView & Adapter"
@@ -37,6 +38,6 @@
       "Hapus hardcoded Intent switching": "closed"
     }
   },
-  "lastTool": "cs_init_learning_env",
-  "updatedAt": "2026-08-26T09:10:21.316Z"
+  "lastTool": "cs_prepare_capstone",
+  "updatedAt": "2026-08-27T04:53:18.113Z"
 }
