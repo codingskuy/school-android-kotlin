@@ -7,7 +7,8 @@
       "Coroutines & Flow",
       "Separation of Concerns & Clean Architecture",
       "Design Patterns Android",
-      "Android Networking dengan Retrofit"
+      "Android Networking dengan Retrofit",
+      "Room Database"
     ],
     "roadmapTopics": [
       "Android development dengan Kotlin"
@@ -17,7 +18,8 @@
       "View System & XML Layout (Android)",
       "ViewModel & MVVM",
       "Clean Architecture",
-      "Android Networking dengan Retrofit"
+      "Android Networking dengan Retrofit",
+      "Room Database"
     ],
     "assessedTopics": [
       "RecyclerView & Adapter"
@@ -39,6 +41,6 @@
       "Task: Review state & error handling": "closed"
     }
   },
-  "lastTool": "cs_update_progress",
-  "updatedAt": "2026-08-28T05:30:28.063Z"
+  "lastTool": "cs_teach_concept",
+  "updatedAt": "2026-08-28T09:30:58.579Z"
 }

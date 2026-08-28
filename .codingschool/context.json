@@ -1,10 +1,10 @@
 {
-  "currentPhase": "done",
+  "currentPhase": "teach",
   "teacher": {
     "misconceptions": [],
     "successfulHintLevel": 1,
-    "activeTopic": "Android Networking dengan Retrofit",
-    "lastDiagnosedAt": "2026-08-26T08:50:44.503Z"
+    "activeTopic": "Room Database",
+    "lastDiagnosedAt": "2026-08-28T09:30:54.608Z"
   },
   "coach": {
     "weakDimensions": [
@@ -28,6 +28,6 @@
       "summary": "Aplikasi Cuaca (Weather App) selesai dipoles menjadi production-grade: 1) Cleanup - konsisten package weather_app, hapus folder theme duplikat, INTERNET permission, build SUCCESS; 2) Clean Architecture - buat domain layer (Weather entity, WeatherRepository interface, GetCurrentWeatherUseCase dengan mapping DTO->Domain), AppModule object dengan Hilt (OkHttp, Retrofit, WeatherApi, Repository), ViewModel pakai UseCase + StateFlow sealed WeatherState Idle/Loading/Success/Error; 3) Review - code review 63/100, GRC low risk, build success, paham DI tradeoff @Inject vs @Provides dan dependency inversion."
     }
   },
-  "updatedAt": "2026-08-28T04:49:17.653Z",
-  "activeTopic": "Android Networking dengan Retrofit"
+  "updatedAt": "2026-08-28T09:30:54.608Z",
+  "activeTopic": "Room Database"
 }
