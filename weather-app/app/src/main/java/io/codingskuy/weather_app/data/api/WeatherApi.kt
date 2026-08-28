@@ -1,6 +1,6 @@
-package io.codingskuy.wheater_app.data.api
+package io.codingskuy.weather_app.data.api
 
-import io.codingskuy.wheater_app.data.response.WeatherResponse
+import io.codingskuy.weather_app.data.response.WeatherResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

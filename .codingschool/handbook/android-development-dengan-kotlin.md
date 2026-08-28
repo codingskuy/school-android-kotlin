@@ -555,3 +555,12 @@ Satu state flow mengalir dari ViewModel → Compose. Tidak ada race condition, t
 **Progress:** 100% complete
 
 ---
+## 2026-08-27 16:11:09
+
+**Topic:** Task: Rename package wheater_app → weather_app
+
+Selesai: semua file menggunakan package name yang konsisten sekarang.
+
+**Progress:** 100% complete
+
+---

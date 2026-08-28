@@ -1,4 +1,4 @@
-package io.codingskuy.wheater_app.data.response
+package io.codingskuy.weather_app.data.response
 
 import com.google.gson.annotations.SerializedName
 

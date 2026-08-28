@@ -1,7 +1,6 @@
 package io.codingskuy.weather_app.presentations.ui
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -93,22 +92,22 @@ fun WeatherScreen(
                         )
 
                         Text(
-                            text = "Suhu: ${data.current.temperature2M} ${data.currentUnits.temperature2M}",
+                            text = "Suhu: ${data.temperature} ${data.temperatureUnits}",
                             style = MaterialTheme.typography.bodyLarge
                         )
 
                         Text(
-                            text = "Kode Cuaca: ${data.current.weatherCode} ${data.currentUnits.weatherCode}",
+                            text = "Kode Cuaca: ${data.weatherCode} ${data.weatherCodeUnits}",
                             style = MaterialTheme.typography.bodyMedium
                         )
 
                         Text(
-                            text = "Kelembapan: ${data.current.relativeHumidity2M} ${data.currentUnits.relativeHumidity2M}",
+                            text = "Kelembapan: ${data.humidity} ${data.humidityUnits}",
                             style = MaterialTheme.typography.bodySmall
                         )
 
                         Text(
-                            text = "Waktu: ${data.current.time} ${data.timezone} ${data.timezoneAbbreviation}",
+                            text = "Waktu: ${data.time} ${data.timezone} ${data.timezoneAbbreviation}",
                             style = MaterialTheme.typography.bodySmall
                         )
                     }

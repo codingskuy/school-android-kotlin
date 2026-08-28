@@ -1,10 +1,10 @@
 {
-  "codeQuality": 48,
+  "codeQuality": 53,
   "architectureThinking": 0,
   "gitProcess": 0,
-  "testingMindset": 0,
-  "documentation": 41,
-  "collaboration": 24,
+  "testingMindset": 35,
+  "documentation": 37,
+  "collaboration": 28,
   "grcAwareness": 0,
-  "riskAssessment": 38
+  "riskAssessment": 49
 }

@@ -3,8 +3,8 @@ package io.codingskuy.weather_app.presentations.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.codingskuy.weather_app.data.repository.WeatherRepository
-import io.codingskuy.wheater_app.data.response.WeatherResponse
+import io.codingskuy.weather_app.domain.entities.Weather
+import io.codingskuy.weather_app.domain.usecase.GetCurrentWeatherUseCase
 import jakarta.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -13,13 +13,13 @@ import kotlinx.coroutines.launch
 sealed class WeatherState {
     data object Idle: WeatherState()
     data object Loading: WeatherState()
-    data class Success(val data: WeatherResponse): WeatherState()
+    data class Success(val data: Weather): WeatherState()
     data class Error(val message: String): WeatherState()
 }
 
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
-    val repository: WeatherRepository
+    private val getCurrentWeatherUseCase: GetCurrentWeatherUseCase
 ): ViewModel() {
 
     private val _state = MutableStateFlow<WeatherState>(WeatherState.Idle)
@@ -41,7 +41,7 @@ class WeatherViewModel @Inject constructor(
             _state.value = WeatherState.Loading
 
             try {
-                val result = repository.getWeather(city.latitude, city.longitude)
+                val result = getCurrentWeatherUseCase(city.latitude, city.longitude)
                 _state.value = WeatherState.Success(result)
             } catch (e: Exception) {
                 _state.value = WeatherState.Error("Gagal mengambil data: ${e.message}")
