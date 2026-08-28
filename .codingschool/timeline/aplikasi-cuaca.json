@@ -1,0 +1,98 @@
+{
+  "projectName": "Aplikasi Cuaca",
+  "description": "Polish & cleanup proyek Weather App (Phase Project Tahap 5: Networking). App sudah berhasil menampilkan data cuaca dari Open-Meteo. Fokus: konsistensi package name, bersihkan duplikat, struktur Clean Architecture bersih, naming konsisten, dan error handling solid.",
+  "techStack": [
+    "Kotlin",
+    "Jetpack Compose",
+    "Retrofit 2",
+    "OkHttp",
+    "Gson",
+    "Hilt DI",
+    "StateFlow",
+    "Coroutines",
+    "Open-Meteo API"
+  ],
+  "milestones": [
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "name": "M1: Cleanup Struktur Project",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 1: Konsistensi Package",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Task: Rename package wheater_app → weather_app",
+              "status": "done",
+              "tasks": []
+            },
+            {
+              "name": "Task: Verifikasi build setelah rename",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        },
+        {
+          "name": "Sprint 2: Bersihkan Duplikat",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Task: Hapus folder theme duplikat",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "M2: Arsitektur & State Handling",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 3: State Handling Solid",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Task: Review state & error handling",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "M3: Review Akhir & Handoff",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 4: Review & Handoff",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Task: Code review + GRC scan",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-08-27T07:08:35.589Z",
+  "updatedAt": "2026-08-28T04:43:57.792Z"
+}

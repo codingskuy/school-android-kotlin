@@ -32,7 +32,7 @@ Strategi utama (berdasarkan riset industri 2026):
 ## 🌐 Tahap 5: Networking — "Aplikasi Cuaca"
 - [x] **Retrofit & JSON Parsing** — ambil data dari API (API cuaca gratis), parsing JSON ke data class.
 - [x] **State Management untuk API** — loading, sukses, error (sealed class + StateFlow).
-- [ ] **Proyek 5: Aplikasi Cuaca** 🚀 — tampilkan cuaca per kota, lengkap dengan error handling.
+- [x] **Proyek 5: Aplikasi Cuaca** 🚀 — tampilkan cuaca per kota, lengkap dengan error handling.
 
 ## 💾 Tahap 6: Penyimpanan Data — "Aplikasi Catatan"
 - [ ] **Room Database** — simpan data permanen (SQLite yang dibungkus rapi, punya fitur Flow).

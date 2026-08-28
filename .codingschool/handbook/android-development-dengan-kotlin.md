@@ -564,3 +564,22 @@ Selesai: semua file menggunakan package name yang konsisten sekarang.
 **Progress:** 100% complete
 
 ---
+## 2026-08-28 12:30:28
+
+**Topic:** Proyek 5: Aplikasi Cuaca
+
+**Theory:**
+Clean Architecture production-grade untuk Networking: Domain di tengah (Weather entity, WeatherRepository interface, GetCurrentWeatherUseCase), Data di luar (WeatherRepositoryImpl dengan mapping WeatherResponse DTO -> Weather domain, WeatherApi, Retrofit), Presentation di luar (WeatherViewModel dengan WeatherState sealed Idle/Loading/Success/Error + StateFlow, WeatherScreen dengan collectAsState). Dependency rule: Data boleh import Domain, Domain tidak boleh import Data. DI: AppModule object menyediakan OkHttp/Retrofit/WeatherApi sebagai @Singleton @Provides, interface di-bind via @Provides, UseCase pakai @Inject constructor sehingga tidak perlu @Provides manual. Build SUCCESS, GRC low risk.
+
+**Practice:**
+1) Cleanup: konsisten package weather_app, hapus folder theme duplikat presentations/ui/ui/theme, tambah INTERNET permission, fix KSP SingletonComponent import
+2) Domain: buat domain/entities/Weather (10 field), domain/repository/WeatherRepository (suspend fun getWeather): Weather, domain/usecase/GetCurrentWeatherUseCase @Inject
+3) Data: WeatherRepositoryImpl mapping response.current.temperature2M -> Weather, AppModule object dengan BASE_URL const
+4) Presentation: WeatherState.Success memegang Weather domain (bukan DTO), ViewModel inject UseCase
+Code Review 59->63/100. Paham tradeoff @Inject vs @Provides.
+
+**Context from Coach:** Aplikasi Cuaca selesai dipoles menjadi production-grade dengan 3 milestone (M1 Cleanup, M2 Arsitektur, M3 Review) - semua done, build success.
+
+**Progress:** 100% complete
+
+---

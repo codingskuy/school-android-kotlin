@@ -1,0 +1,41 @@
+{
+  "projectName": "Aplikasi Cuaca",
+  "item": "Task: Review state & error handling",
+  "status": "claimed",
+  "files": [
+    {
+      "path": "app/src/main/java/io/codingskuy/weather_app/AppModule.kt",
+      "existed": false
+    },
+    {
+      "path": "app/src/main/java/io/codingskuy/weather_app/data/repository/WeatherRepository.kt",
+      "existed": false
+    },
+    {
+      "path": "app/src/main/java/io/codingskuy/weather_app/presentations/viewmodel/WeatherViewModel.kt",
+      "existed": false
+    }
+  ],
+  "attempts": 0,
+  "openedAt": "2026-08-27T10:09:39.710Z",
+  "qaHistory": [
+    {
+      "question": "Kenapa GetCurrentWeatherUseCase bisa jalan tanpa @Provides di AppModule setelah ditambah @Inject?",
+      "answer": "Karena @Inject constructor membuat Hilt bisa bikin UseCase otomatis tanpa perlu waiter AppModule - Hilt telusuri kebutuhan Repository yang sudah ada provide",
+      "score": "correct"
+    },
+    {
+      "question": "Kenapa WeatherRepositoryImpl tetap butuh @Provides meski sudah tanpa @Inject?",
+      "answer": "Karena WeatherRepository adalah interface, Hilt tidak bisa bikin interface otomatis, butuh mapping manual di AppModule untuk kasih tau Impl mana yang dipakai",
+      "score": "correct"
+    },
+    {
+      "question": "Kenapa hapus @Inject di WeatherRepositoryImpl tetap jalan?",
+      "answer": "Karena tidak ada yang inject Impl secara langsung, semua minta interface, jadi AppModule yang provide Impl via WeatherApi sudah cukup dan hemat kode",
+      "score": "correct"
+    }
+  ],
+  "confidence": 100,
+  "successLevel": "junior",
+  "resolvedAt": "2026-08-28T04:39:45.656Z"
+}

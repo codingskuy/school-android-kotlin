@@ -42,7 +42,8 @@
         "Proyek 4: Refactor To-Do List",
         "Retrofit & JSON Parsing",
         "State Management untuk API",
-        "Task: Rename package wheater_app → weather_app"
+        "Task: Rename package wheater_app → weather_app",
+        "Proyek 5: Aplikasi Cuaca"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -57,13 +58,14 @@
         "Proyek 4: Refactor To-Do List",
         "Retrofit & JSON Parsing",
         "State Management untuk API",
-        "Task: Rename package wheater_app → weather_app"
+        "Task: Rename package wheater_app → weather_app",
+        "Proyek 5: Aplikasi Cuaca"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Task: Rename package wheater_app → weather_app",
+      "lastCompletedItem": "Proyek 5: Aplikasi Cuaca",
       "currentItem": null
     }
   },
@@ -73,6 +75,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 1050,
+  "xp": 1100,
   "level": 2
 }
