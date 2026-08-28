@@ -15,6 +15,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
+@Suppress("unused")
 object AppModule {
     private const val BASE_URL = "https://api.open-meteo.com/"
 
