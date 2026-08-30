@@ -35,7 +35,7 @@ Strategi utama (berdasarkan riset industri 2026):
 - [x] **Proyek 5: Aplikasi Cuaca** 🚀 — tampilkan cuaca per kota, lengkap dengan error handling.
 
 ## 💾 Tahap 6: Penyimpanan Data — "Aplikasi Catatan"
-- [ ] **Room Database** — simpan data permanen (SQLite yang dibungkus rapi, punya fitur Flow).
+- [x] **Room Database** — simpan data permanen (SQLite yang dibungkus rapi, punya fitur Flow).
 - [ ] **Proyek 6: Catatan Harian** 🚀 — tulis, edit, hapus catatan tersimpan di database.
 
 ## 🧪 Tahap 7: Testing — "Jangan takut merusak kode"

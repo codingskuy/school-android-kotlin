@@ -1,4 +1,4 @@
-package io.codingskuy.notes_app.ui.theme
+package io.codingskuy.notes_app.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -43,7 +43,8 @@
         "Retrofit & JSON Parsing",
         "State Management untuk API",
         "Task: Rename package wheater_app → weather_app",
-        "Proyek 5: Aplikasi Cuaca"
+        "Proyek 5: Aplikasi Cuaca",
+        "Room Database"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -59,13 +60,14 @@
         "Retrofit & JSON Parsing",
         "State Management untuk API",
         "Task: Rename package wheater_app → weather_app",
-        "Proyek 5: Aplikasi Cuaca"
+        "Proyek 5: Aplikasi Cuaca",
+        "Room Database"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Proyek 5: Aplikasi Cuaca",
+      "lastCompletedItem": "Room Database",
       "currentItem": null
     }
   },
@@ -75,6 +77,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 1100,
+  "xp": 1150,
   "level": 2
 }

@@ -583,3 +583,16 @@ Code Review 59->63/100. Paham tradeoff @Inject vs @Provides.
 **Progress:** 100% complete
 
 ---
+## 2026-08-30 11:53:13
+
+**Topic:** Room Database
+
+**Theory:**
+Room Database = lemari arsip permanen (SQLite yang dibungkus). 3 serangkai: @Entity (data class kartu), @Dao (interface petugas dengan @Query/@Insert/@Delete), @Database (abstract class lemari). Kenapa penting: data tidak hilang saat app ditutup, bisa offline, Flow untuk observe perubahan. Hilt: AppModule menyediakan Room.databaseBuilder + Dao sebagai Singleton, App pakai @HiltAndroidApp, MainActivity pakai @AndroidEntryPoint.
+
+**Practice:**
+notes-app: buat data/models/schemas/NoteEntity (@Entity tableName notes, @PrimaryKey autoGenerate), NoteDao (getAllNotes Flow, insert, delete, getNoteById), data/models/databases/NoteDatabase. Fix: hapus spasi di libs.versions.toml group androidx.room, betulkan typo compailer->compiler, fix OnConflictStrategy import, tambah return type, tambah tableName. Buat domain/entities/Note, domain/repositories/NoteRepository (Flow), data/repositories/NoteRepositoryImpl dengan mapping Entity<->Note, domain/usecase 4 UseCase terpisah dengan @Inject, presentation/viewmodel/NoteViewModel @HiltViewModel dengan StateFlow notes + selectedNote, fix showDetailNote pakai StateFlow bukan var. Build SUCCESS.
+
+**Progress:** 100% complete
+
+---
