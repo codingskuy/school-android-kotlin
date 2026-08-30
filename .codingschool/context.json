@@ -1,5 +1,5 @@
 {
-  "currentPhase": "teach",
+  "currentPhase": "review",
   "teacher": {
     "misconceptions": [],
     "successfulHintLevel": 1,
@@ -26,8 +26,18 @@
       "projectName": "Proyek 5: Aplikasi Cuaca",
       "topic": "android development dengan kotlin",
       "summary": "Aplikasi Cuaca (Weather App) selesai dipoles menjadi production-grade: 1) Cleanup - konsisten package weather_app, hapus folder theme duplikat, INTERNET permission, build SUCCESS; 2) Clean Architecture - buat domain layer (Weather entity, WeatherRepository interface, GetCurrentWeatherUseCase dengan mapping DTO->Domain), AppModule object dengan Hilt (OkHttp, Retrofit, WeatherApi, Repository), ViewModel pakai UseCase + StateFlow sealed WeatherState Idle/Loading/Success/Error; 3) Review - code review 63/100, GRC low risk, build success, paham DI tradeoff @Inject vs @Provides dan dependency inversion."
+    },
+    "pendingCapstone": {
+      "topic": "android development dengan kotlin",
+      "items": [
+        "**Proyek 6: Catatan Harian** 🚀 — tulis, edit, hapus catatan tersimpan di database."
+      ],
+      "ready": true,
+      "type": "phase",
+      "projectName": "Proyek 6: Catatan Harian",
+      "phaseLabel": "Tahap 6"
     }
   },
-  "updatedAt": "2026-08-28T09:30:54.608Z",
+  "updatedAt": "2026-08-30T05:15:29.931Z",
   "activeTopic": "Room Database"
 }

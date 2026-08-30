@@ -38,9 +38,11 @@
       "TaskFormatter → domain/usecase/TaskFormatterUseCase.kt": "closed",
       "Rename TaskRepository.task → getAllTasks()": "closed",
       "Hapus hardcoded Intent switching": "closed",
-      "Task: Review state & error handling": "closed"
+      "Task: Review state & error handling": "closed",
+      "Task List Compose": "closed",
+      "Task Form Tambah Hapus": "open"
     }
   },
-  "lastTool": "cs_update_progress",
-  "updatedAt": "2026-08-30T04:53:13.825Z"
+  "lastTool": "cs_claim_open",
+  "updatedAt": "2026-08-30T05:15:37.627Z"
 }
