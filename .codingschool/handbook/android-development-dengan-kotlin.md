@@ -596,3 +596,18 @@ notes-app: buat data/models/schemas/NoteEntity (@Entity tableName notes, @Primar
 **Progress:** 100% complete
 
 ---
+## 2026-08-30 23:55:54
+
+**Topic:** Proyek 6: Catatan Harian
+
+**Theory:**
+Room + Clean + Compose end-to-end: Entity @Entity tableName notes, Dao @Dao Flow, Database abstract, AppModule object Room.databaseBuilder singleton + Dao + Repository mapping Entity<->Note, domain Note + NoteRepository Flow, 4 UseCases @Inject terpisah, ViewModel @HiltViewModel notes StateFlow, UI NoteListScreen LazyColumn key id + AddNoteDialog remember + delete IconButton, MainActivity @AndroidEntryPoint hiltViewModel. Migration 1->2 DEFAULT 0, inMemory test dengan Robolectric.
+
+**Practice:**
+notes-app: buat NoteEntity, NoteDao (fix OnConflictStrategy import & return type), NoteDatabase, Hilt AppModule + App.kt, domain Note + NoteRepository, NoteRepositoryImpl mapping, UseCases, ViewModel, UI List + Dialog. Fix: hapus spasi group androidx.room, typo compailer->compiler, fix @Before/@After + delete->insert di test, fix Icon import & viewModel.notes, tambah priority field di Entity biar sinkron migration. Build SUCCESS, test 2/2 passed, code review 71/100, GRC medium.
+
+**Context from Coach:** Proyek 6 selesai 3 sprint (M1 List, M2 Form, M3 Review) + tips pro migration & Robolectric test.
+
+**Progress:** 100% complete
+
+---

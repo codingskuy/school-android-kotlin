@@ -44,7 +44,8 @@
         "State Management untuk API",
         "Task: Rename package wheater_app → weather_app",
         "Proyek 5: Aplikasi Cuaca",
-        "Room Database"
+        "Room Database",
+        "Proyek 6: Catatan Harian"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -61,13 +62,14 @@
         "State Management untuk API",
         "Task: Rename package wheater_app → weather_app",
         "Proyek 5: Aplikasi Cuaca",
-        "Room Database"
+        "Room Database",
+        "Proyek 6: Catatan Harian"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Room Database",
+      "lastCompletedItem": "Proyek 6: Catatan Harian",
       "currentItem": null
     }
   },
@@ -77,6 +79,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 1150,
+  "xp": 1200,
   "level": 2
 }

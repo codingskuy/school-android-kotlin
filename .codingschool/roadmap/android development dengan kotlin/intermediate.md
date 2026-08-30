@@ -36,7 +36,7 @@ Strategi utama (berdasarkan riset industri 2026):
 
 ## 💾 Tahap 6: Penyimpanan Data — "Aplikasi Catatan"
 - [x] **Room Database** — simpan data permanen (SQLite yang dibungkus rapi, punya fitur Flow).
-- [ ] **Proyek 6: Catatan Harian** 🚀 — tulis, edit, hapus catatan tersimpan di database.
+- [x] **Proyek 6: Catatan Harian** 🚀 — tulis, edit, hapus catatan tersimpan di database.
 
 ## 🧪 Tahap 7: Testing — "Jangan takut merusak kode"
 - [ ] **Unit Testing** — JUnit + test ViewModel & repository (logic bener).
