@@ -12,7 +12,8 @@ class NoteRepositoryImpl(private val dao: NoteDao): NoteRepository {
         id = it.id,
         title = it.title,
         content = it.content,
-        date = it.date
+        date = it.date,
+        priority = it.priority
     ) } }
 
     override suspend fun insert(note: Note) = dao.insert(NoteEntity(note.id, note.title, note.content, note.date))
@@ -21,7 +22,8 @@ class NoteRepositoryImpl(private val dao: NoteDao): NoteRepository {
         id = note.id,
         title = note.title,
         content = note.content,
-        date = note.date
+        date = note.date,
+        priority = note.priority
     ))
 
     override suspend fun getNoteById(id: Int): Note? = dao.getNoteById(id)?.let {
@@ -29,7 +31,8 @@ class NoteRepositoryImpl(private val dao: NoteDao): NoteRepository {
             id = it.id,
             title = it.title,
             content = it.content,
-            date = it.date
+            date = it.date,
+            priority = it.priority
         )
     }
 }

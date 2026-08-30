@@ -7,6 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import io.codingskuy.notes_app.data.models.databases.MIGRATION_1_2
 import io.codingskuy.notes_app.data.models.databases.NoteDatabase
 import io.codingskuy.notes_app.data.models.schemas.NoteDao
 import io.codingskuy.notes_app.data.repositories.NoteRepositoryImpl
@@ -20,7 +21,9 @@ object AppModule {
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): NoteDatabase =
         Room.databaseBuilder(context,
-        NoteDatabase::class.java, "notes_db").build()
+        NoteDatabase::class.java, "notes_db")
+            .addMigrations(MIGRATION_1_2)
+            .build()
 
     @Provides
     fun provideNoteDao(db: NoteDatabase): NoteDao = db.noteDao()

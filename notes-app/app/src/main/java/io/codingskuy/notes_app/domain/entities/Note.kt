@@ -4,5 +4,6 @@ data class Note(
     val id: Int = 0,
     val title: String,
     val content: String,
-    val date: Long
+    val date: Long,
+    val priority: Int = 0
 )
