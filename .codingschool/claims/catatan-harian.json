@@ -1,0 +1,32 @@
+{
+  "projectName": "Catatan Harian",
+  "item": "Task Form Tambah Hapus",
+  "status": "claimed",
+  "files": [
+    {
+      "path": "app/src/main/java/io/codingskuy/notes_app/presentation/ui/AddNoteDialog.kt",
+      "existed": false
+    },
+    {
+      "path": "app/src/main/java/io/codingskuy/notes_app/presentation/ui/NoteListScreen.kt",
+      "existed": false
+    }
+  ],
+  "attempts": 0,
+  "openedAt": "2026-08-30T05:15:37.627Z",
+  "qaHistory": [
+    {
+      "question": "Kenapa harus pakai remember di var title by remember { mutableStateOf }?",
+      "answer": "remember digunakan untuk menangani kebutuhan perubaha value pada sebuah component ui di compose, ini mirip sebuah mutableState tetapi khusus view jika remeber dihapus maka getter contohnya TextField tidak akan mengetahui data terkini untuk ditampilkan atau diolah oleh sebuah component design system / widget",
+      "score": "correct"
+    },
+    {
+      "question": "Kalau validasi isNotBlank dihapus apa risiko di database?",
+      "answer": "ini adalah validasi / verifikasi terhadap perubahan data untuk kepenting eksperient user agar user tidak pernah / kejadian menginput data kosong karena akan diolah ke sisi viemodel/logic bisnis program, hal ini bisa fatal karena akan tersimpan didatabase sebagai data buruk atau istilah modernnya data bias",
+      "score": "correct"
+    }
+  ],
+  "confidence": 100,
+  "successLevel": "junior",
+  "resolvedAt": "2026-08-30T05:31:08.431Z"
+}

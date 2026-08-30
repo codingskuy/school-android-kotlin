@@ -8,7 +8,8 @@
       "Separation of Concerns & Clean Architecture",
       "Design Patterns Android",
       "Android Networking dengan Retrofit",
-      "Room Database"
+      "Room Database",
+      "Unit Testing"
     ],
     "roadmapTopics": [
       "Android development dengan Kotlin"
@@ -19,7 +20,8 @@
       "ViewModel & MVVM",
       "Clean Architecture",
       "Android Networking dengan Retrofit",
-      "Room Database"
+      "Room Database",
+      "Unit Testing"
     ],
     "assessedTopics": [
       "RecyclerView & Adapter"
@@ -43,6 +45,6 @@
       "Task Form Tambah Hapus": "closed"
     }
   },
-  "lastTool": "cs_update_progress",
-  "updatedAt": "2026-08-30T16:55:54.148Z"
+  "lastTool": "cs_teach_concept",
+  "updatedAt": "2026-08-30T17:22:01.402Z"
 }

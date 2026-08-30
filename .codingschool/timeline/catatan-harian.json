@@ -1,0 +1,80 @@
+{
+  "projectName": "Catatan Harian",
+  "description": "Aplikasi Catatan Harian - Proyek 6 Tahap 6. Fondasi Room + Hilt + ViewModel sudah siap. Fokus: bangun UI Compose lengkap (list, tambah, hapus, detail), navigasi, dan state handling production-grade.",
+  "techStack": [
+    "Kotlin",
+    "Jetpack Compose",
+    "Room 2.8.4",
+    "Hilt",
+    "Coroutines Flow",
+    "StateFlow",
+    "Navigation Compose"
+  ],
+  "milestones": [
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "status": "todo",
+      "sprints": []
+    },
+    {
+      "name": "M1 UI List",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 1 List State",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Task List Compose",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "M2 Form Interaksi",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 2 Form Navigasi",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Task Form Tambah Hapus",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "M3 Review Handoff",
+      "status": "done",
+      "sprints": [
+        {
+          "name": "Sprint 3 Review",
+          "status": "done",
+          "epics": [
+            {
+              "name": "Task Review GRC",
+              "status": "done",
+              "tasks": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-08-30T04:57:32.009Z",
+  "updatedAt": "2026-08-30T05:31:32.324Z"
+}

@@ -1,10 +1,10 @@
 {
-  "currentPhase": "done",
+  "currentPhase": "teach",
   "teacher": {
     "misconceptions": [],
     "successfulHintLevel": 1,
-    "activeTopic": "Room Database",
-    "lastDiagnosedAt": "2026-08-28T09:30:54.608Z"
+    "activeTopic": "Unit Testing",
+    "lastDiagnosedAt": "2026-08-30T17:21:57.884Z"
   },
   "coach": {
     "weakDimensions": [
@@ -27,6 +27,6 @@
       "summary": "Catatan Harian selesai: Room Entity/Dao/Database + Hilt AppModule (Room.databaseBuilder singleton), domain Note + NoteRepository Flow, 4 UseCases terpisah @Inject, NoteViewModel @HiltViewModel dengan notes StateFlow + selectedNote, UI Compose NoteListScreen LazyColumn key id + AddNoteDialog remember state + delete IconButton, MainActivity @AndroidEntryPoint hiltViewModel. Build success, code review 71/100, GRC medium (Room parameterized queries aman)."
     }
   },
-  "updatedAt": "2026-08-30T05:31:35.319Z",
-  "activeTopic": "Room Database"
+  "updatedAt": "2026-08-30T17:21:57.884Z",
+  "activeTopic": "Unit Testing"
 }
