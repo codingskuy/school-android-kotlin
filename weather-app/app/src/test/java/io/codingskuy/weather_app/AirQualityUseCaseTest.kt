@@ -1,5 +1,8 @@
 package io.codingskuy.weather_app
 
+import io.codingskuy.weather_app.domain.entities.AirQuality
+import io.codingskuy.weather_app.domain.repository.AirQualityRepository
+import io.codingskuy.weather_app.domain.usecase.GetAirQualityUseCase
 import io.mockk.coEvery
 import kotlinx.coroutines.test.runTest
 import io.mockk.mockk
