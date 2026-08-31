@@ -1,5 +1,11 @@
 package io.codingskuy.weather_app.domain.repositories
 
+import com.google.common.base.CharMatcher.any
+import io.codingskuy.weather_app.data.api.AirQualityApi
+import io.codingskuy.weather_app.data.repository.AirQualityRepositoryImpl
+import io.codingskuy.weather_app.data.response.AirQualityCurrent
+import io.codingskuy.weather_app.data.response.AirQualityCurrentUnits
+import io.codingskuy.weather_app.data.response.AirQualityResponse
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
@@ -28,14 +34,14 @@ class AirQualityRepositoryTest {
                 time = "iso8601",
                 interval = "seconds",
                 pm10 = "μg/m³",
-                pm2_5 = "μg/m³",
+                pm25 = "μg/m³",
                 carbonMonoxide = "μg/m³"
             ),
             current = AirQualityCurrent(
                 time = "2026-08-31T04:00",
                 interval = 3600,
                 pm10 = 32.5,
-                pm2_5 = 29.3,
+                pm25 = 29.3,
                 carbonMonoxide = 1009.0
             )
         )
