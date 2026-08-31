@@ -37,6 +37,11 @@ android {
     buildFeatures {
         compose = true
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -65,4 +70,12 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+
+    // unit test
+    testImplementation(libs.mockk)
+    testImplementation(libs.turbine)
+    testImplementation(libs.robolectric)
+    implementation(libs.androidx.test)
+    androidTestImplementation(libs.androidx.test)
+    testImplementation(libs.kotlinx.coroutines.test)
 }
