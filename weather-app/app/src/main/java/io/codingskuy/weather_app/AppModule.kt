@@ -22,7 +22,7 @@ import javax.inject.Singleton
 @Suppress("unused")
 object AppModule {
     private const val BASE_URL = "https://api.open-meteo.com/"
-    private const val BASE_URL_AIR = "https://air-quality-aapi.open-meteo.com/"
+    private const val BASE_URL_AIR = "https://air-quality-api.open-meteo.com/"
 
     @Singleton
     @Provides

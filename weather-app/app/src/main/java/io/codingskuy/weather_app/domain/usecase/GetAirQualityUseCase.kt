@@ -2,8 +2,9 @@ package io.codingskuy.weather_app.domain.usecase
 
 import io.codingskuy.weather_app.domain.entities.AirQuality
 import io.codingskuy.weather_app.domain.repository.AirQualityRepository
+import javax.inject.Inject
 
-class GetAirQualityUseCase(
+class GetAirQualityUseCase @Inject constructor(
     private val repository: AirQualityRepository
 ) {
     suspend operator fun invoke(latitude: Double, longitude: Double): AirQuality {

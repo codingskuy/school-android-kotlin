@@ -3,7 +3,9 @@ package io.codingskuy.weather_app.presentations.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import io.codingskuy.weather_app.domain.entities.AirQuality
 import io.codingskuy.weather_app.domain.entities.Weather
+import io.codingskuy.weather_app.domain.usecase.GetAirQualityUseCase
 import io.codingskuy.weather_app.domain.usecase.GetCurrentWeatherUseCase
 import jakarta.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,13 +19,24 @@ sealed class WeatherState {
     data class Error(val message: String): WeatherState()
 }
 
+sealed class AirQualityState {
+    data object Idle: AirQualityState()
+    data object Loading: AirQualityState()
+    data class Success(val data: AirQuality): AirQualityState()
+    data class Error(val message: String): AirQualityState()
+}
+
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
-    private val getCurrentWeatherUseCase: GetCurrentWeatherUseCase
+    private val getCurrentWeatherUseCase: GetCurrentWeatherUseCase,
+    private val getAirQualityUseCase: GetAirQualityUseCase
 ): ViewModel() {
 
-    private val _state = MutableStateFlow<WeatherState>(WeatherState.Idle)
-    val state = _state.asStateFlow()
+    private val _weatherState = MutableStateFlow<WeatherState>(WeatherState.Idle)
+    val weatherState = _weatherState.asStateFlow()
+
+    private val _airQualityState = MutableStateFlow<AirQualityState>(AirQualityState.Idle)
+    val airQualityState = _airQualityState.asStateFlow()
 
     data class City(val name: String, val latitude: Double, val longitude: Double)
     val cities = listOf(
@@ -38,14 +51,26 @@ class WeatherViewModel @Inject constructor(
 
     fun fetchWeather(city: City) {
         viewModelScope.launch {
-            _state.value = WeatherState.Loading
+            _weatherState.value = WeatherState.Loading
 
             try {
                 val result = getCurrentWeatherUseCase(city.latitude, city.longitude)
-                _state.value = WeatherState.Success(result)
+                _weatherState.value = WeatherState.Success(result)
             } catch (e: Exception) {
-                _state.value = WeatherState.Error("Gagal mengambil data: ${e.message}")
+                _weatherState.value = WeatherState.Error("Gagal mengambil data: ${e.message}")
             }
         }
+    }
+
+    fun fetchAirQuality(city: City) {
+        viewModelScope.launch {
+            val result = getAirQualityUseCase(city.latitude, city.longitude)
+            _airQualityState.value = AirQualityState.Success(result)
+        }
+    }
+
+    fun fetchAll(city: City) {
+        fetchWeather(city)
+        fetchAirQuality(city)
     }
 }

@@ -25,7 +25,7 @@ import io.codingskuy.weather_app.presentations.viewmodel.WeatherViewModel
 fun WeatherScreen(
     viewModel: WeatherViewModel, modifier: Modifier) {
 
-    val state by viewModel.state.collectAsState()
+    val state by viewModel.weatherState.collectAsState()
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -42,7 +42,7 @@ fun WeatherScreen(
                 Card(modifier = Modifier
                     .fillMaxWidth()
                     .padding(4.dp)
-                    .clickable { viewModel.fetchWeather(city) }) {
+                    .clickable {viewModel.fetchAll(city)}) {
                     Text(
                         text = city.name,
                         modifier = Modifier.padding(16.dp),
