@@ -1,0 +1,165 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > AirQualityScreenKt</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">io.codingskuy.weather_app.presentations.ui</a>
+</div>
+
+<h1>Coverage Summary for Class: AirQualityScreenKt (io.codingskuy.weather_app.presentations.ui)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AirQualityScreenKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/12)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/28)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package io.codingskuy.weather_app.presentations.ui
+&nbsp;
+&nbsp;import androidx.compose.foundation.layout.*
+&nbsp;import androidx.compose.material3.*
+&nbsp;import androidx.compose.runtime.*
+&nbsp;import androidx.compose.ui.Alignment
+&nbsp;import androidx.compose.ui.Modifier
+&nbsp;import androidx.compose.ui.unit.dp
+&nbsp;import io.codingskuy.weather_app.presentations.viewmodel.AirQualityState
+&nbsp;import io.codingskuy.weather_app.presentations.viewmodel.WeatherViewModel
+&nbsp;
+&nbsp;@Composable
+<b class="nc">&nbsp;fun AirQualityScreen(viewModel: WeatherViewModel) {</b>
+<b class="nc">&nbsp;    val airQuality by viewModel.airQualityState.collectAsState()</b>
+<b class="nc">&nbsp;    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {</b>
+<b class="nc">&nbsp;        Text(&quot;Kualitas Udara&quot;, style = MaterialTheme.typography.headlineMedium)</b>
+<b class="nc">&nbsp;        when(val currentState = airQuality) {</b>
+<b class="nc">&nbsp;            AirQualityState.Idle -&gt; {</b>
+<b class="nc">&nbsp;                Text(</b>
+<b class="nc">&nbsp;                    text = &quot;Pilih kota untuk melihat cuaca!&quot;,</b>
+<b class="nc">&nbsp;                    style = MaterialTheme.typography.bodyMedium,</b>
+<b class="nc">&nbsp;                    modifier = Modifier.align(Alignment.CenterHorizontally)</b>
+&nbsp;                )
+&nbsp;            }
+<b class="nc">&nbsp;            is AirQualityState.Error -&gt; {</b>
+<b class="nc">&nbsp;                Card(</b>
+<b class="nc">&nbsp;                    modifier = Modifier.fillMaxWidth(),</b>
+<b class="nc">&nbsp;                    colors = CardDefaults.cardColors(</b>
+<b class="nc">&nbsp;                        containerColor = MaterialTheme.colorScheme.errorContainer</b>
+&nbsp;                    )
+<b class="nc">&nbsp;                ) {</b>
+<b class="nc">&nbsp;                    Text(</b>
+<b class="nc">&nbsp;                        text = currentState.message,</b>
+<b class="nc">&nbsp;                        color = MaterialTheme.colorScheme.onErrorContainer</b>
+&nbsp;                    )
+&nbsp;                }
+&nbsp;            }
+<b class="nc">&nbsp;            AirQualityState.Loading -&gt; {</b>
+<b class="nc">&nbsp;                CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))</b>
+<b class="nc">&nbsp;                Text(&quot;Mengambil data...&quot;, modifier = Modifier.align(Alignment.CenterHorizontally))</b>
+&nbsp;            }
+<b class="nc">&nbsp;            is AirQualityState.Success -&gt; {</b>
+<b class="nc">&nbsp;                Text(&quot;PM10 ${currentState.data.pm10} μg/m³&quot;)</b>
+<b class="nc">&nbsp;                Text(&quot;PM2.5 ${currentState.data.pm25} μg/m³&quot;)</b>
+<b class="nc">&nbsp;                Text(&quot;CO ${currentState.data.carbonMonoxide} μg/m³&quot;)</b>
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;    }</b>
+<b class="nc">&nbsp;}</b>
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-09-01 15:35</div>
+</div>
+</body>
+</html>

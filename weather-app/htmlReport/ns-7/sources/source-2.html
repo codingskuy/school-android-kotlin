@@ -1,0 +1,335 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > WeatherScreenKt</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">io.codingskuy.weather_app.presentations.ui</a>
+</div>
+
+<h1>Coverage Summary for Class: WeatherScreenKt (io.codingskuy.weather_app.presentations.ui)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">WeatherScreenKt</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    6.2%
+  </span>
+  <span class="absValue">
+    (1/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/57)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">WeatherScreenKt$WeatherScreen$2$1$1$1$1$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherScreenKt$WeatherScreen$2$1$1$1$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherScreenKt$WeatherScreen$lambda$12$lambda$6$lambda$5$$inlined$items$default$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherScreenKt$WeatherScreen$lambda$12$lambda$6$lambda$5$$inlined$items$default$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherScreenKt$WeatherScreen$lambda$12$lambda$6$lambda$5$$inlined$items$default$3</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherScreenKt$WeatherScreen$lambda$12$lambda$6$lambda$5$$inlined$items$default$4</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/11)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    6.2%
+  </span>
+  <span class="absValue">
+    (1/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/62)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package io.codingskuy.weather_app.presentations.ui
+&nbsp;
+&nbsp;import androidx.compose.foundation.clickable
+&nbsp;import androidx.compose.foundation.layout.Column
+&nbsp;import androidx.compose.foundation.layout.fillMaxSize
+&nbsp;import androidx.compose.foundation.layout.fillMaxWidth
+&nbsp;import androidx.compose.foundation.layout.padding
+&nbsp;import androidx.compose.foundation.lazy.LazyColumn
+&nbsp;import androidx.compose.foundation.lazy.items
+&nbsp;import androidx.compose.material3.Card
+&nbsp;import androidx.compose.material3.CardDefaults
+&nbsp;import androidx.compose.material3.CircularProgressIndicator
+&nbsp;import androidx.compose.material3.MaterialTheme
+&nbsp;import androidx.compose.material3.Text
+&nbsp;import androidx.compose.runtime.Composable
+&nbsp;import androidx.compose.runtime.collectAsState
+&nbsp;import androidx.compose.runtime.getValue
+&nbsp;import androidx.compose.ui.Alignment
+&nbsp;import androidx.compose.ui.Modifier
+&nbsp;import androidx.compose.ui.unit.dp
+&nbsp;import io.codingskuy.weather_app.presentations.viewmodel.WeatherState
+&nbsp;import io.codingskuy.weather_app.presentations.viewmodel.WeatherViewModel
+&nbsp;
+&nbsp;@Composable
+&nbsp;fun WeatherScreen(
+<b class="nc">&nbsp;    viewModel: WeatherViewModel, modifier: Modifier = Modifier, onWeatherClick: () -&gt; Unit = {}</b>
+<b class="nc">&nbsp;) {</b>
+&nbsp;
+<b class="nc">&nbsp;    val state by viewModel.weatherState.collectAsState()</b>
+&nbsp;
+<b class="nc">&nbsp;    Column(</b>
+<b class="nc">&nbsp;        horizontalAlignment = Alignment.CenterHorizontally,</b>
+<b class="nc">&nbsp;        modifier = modifier</b>
+<b class="nc">&nbsp;            .fillMaxSize()</b>
+<b class="nc">&nbsp;            .padding(16.dp)</b>
+&nbsp;    ) {
+<b class="nc">&nbsp;        Text(&quot;Aplikasi Cuaca&quot;, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(16.dp))</b>
+&nbsp;
+<b class="nc">&nbsp;        Text(&quot;Pilih Kota:&quot;, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(8.dp))</b>
+&nbsp;
+<b class="nc">&nbsp;        LazyColumn(modifier =  Modifier.weight(1f)) {</b>
+<b class="nc">&nbsp;            items(viewModel.cities) { city -&gt;</b>
+&nbsp;                Card(modifier = Modifier
+&nbsp;                    .fillMaxWidth()
+&nbsp;                    .padding(4.dp)
+<b class="nc">&nbsp;                    .clickable {viewModel.fetchAll(city)}) {</b>
+<b class="nc">&nbsp;                    Text(</b>
+<b class="nc">&nbsp;                        text = city.name,</b>
+<b class="nc">&nbsp;                        modifier = Modifier.padding(16.dp),</b>
+<b class="nc">&nbsp;                        style = MaterialTheme.typography.bodyLarge</b>
+&nbsp;                    )
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        when(val currentState = state) {</b>
+<b class="nc">&nbsp;            WeatherState.Idle -&gt; {</b>
+<b class="nc">&nbsp;                Text(</b>
+<b class="nc">&nbsp;                    text = &quot;Pilih kota untuk melihat cuaca!&quot;,</b>
+<b class="nc">&nbsp;                    style = MaterialTheme.typography.bodyMedium,</b>
+<b class="nc">&nbsp;                    modifier = Modifier.align(Alignment.CenterHorizontally)</b>
+&nbsp;                )
+&nbsp;            }
+<b class="nc">&nbsp;            WeatherState.Loading -&gt; {</b>
+<b class="nc">&nbsp;                CircularProgressIndicator(modifier = Modifier.align(Alignment.CenterHorizontally))</b>
+<b class="nc">&nbsp;                Text(&quot;Mengambil data...&quot;, modifier = Modifier.align(Alignment.CenterHorizontally))</b>
+&nbsp;            }
+<b class="nc">&nbsp;            is WeatherState.Error -&gt; {</b>
+<b class="nc">&nbsp;                Card(</b>
+<b class="nc">&nbsp;                    modifier = Modifier.fillMaxWidth(),</b>
+<b class="nc">&nbsp;                    colors = CardDefaults.cardColors(</b>
+<b class="nc">&nbsp;                        containerColor = MaterialTheme.colorScheme.errorContainer</b>
+&nbsp;                    )
+<b class="nc">&nbsp;                ) {</b>
+<b class="nc">&nbsp;                    Text(</b>
+<b class="nc">&nbsp;                        text = currentState.message,</b>
+<b class="nc">&nbsp;                        color = MaterialTheme.colorScheme.onErrorContainer</b>
+&nbsp;                    )
+&nbsp;                }
+&nbsp;            }
+&nbsp;
+<b class="nc">&nbsp;            is WeatherState.Success -&gt; {</b>
+<b class="nc">&nbsp;                val data = currentState.data</b>
+<b class="nc">&nbsp;                Card(</b>
+<b class="nc">&nbsp;                    modifier = Modifier</b>
+<b class="nc">&nbsp;                        .fillMaxWidth()</b>
+<b class="nc">&nbsp;                        .clickable{onWeatherClick()}</b>
+<b class="nc">&nbsp;                ) {</b>
+<b class="nc">&nbsp;                    Column(</b>
+<b class="nc">&nbsp;                        modifier = Modifier.padding(16.dp)</b>
+&nbsp;                    ) {
+<b class="nc">&nbsp;                        Text(</b>
+<b class="nc">&nbsp;                            text = &quot;Cuaca Saat ini&quot;,</b>
+<b class="nc">&nbsp;                            style = MaterialTheme.typography.headlineMedium</b>
+&nbsp;                        )
+&nbsp;
+<b class="nc">&nbsp;                        Text(</b>
+<b class="nc">&nbsp;                            text = &quot;Suhu: ${data.temperature} ${data.temperatureUnits}&quot;,</b>
+<b class="nc">&nbsp;                            style = MaterialTheme.typography.bodyLarge</b>
+&nbsp;                        )
+&nbsp;
+<b class="nc">&nbsp;                        Text(</b>
+<b class="nc">&nbsp;                            text = &quot;Kode Cuaca: ${data.weatherCode} ${data.weatherCodeUnits}&quot;,</b>
+<b class="nc">&nbsp;                            style = MaterialTheme.typography.bodyMedium</b>
+&nbsp;                        )
+&nbsp;
+<b class="nc">&nbsp;                        Text(</b>
+<b class="nc">&nbsp;                            text = &quot;Kelembapan: ${data.humidity} ${data.humidityUnits}&quot;,</b>
+<b class="nc">&nbsp;                            style = MaterialTheme.typography.bodySmall</b>
+&nbsp;                        )
+&nbsp;
+<b class="nc">&nbsp;                        Text(</b>
+<b class="nc">&nbsp;                            text = &quot;Waktu: ${data.time} ${data.timezone} ${data.timezoneAbbreviation}&quot;,</b>
+<b class="nc">&nbsp;                            style = MaterialTheme.typography.bodySmall</b>
+&nbsp;                        )
+<b class="nc">&nbsp;                    }</b>
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;    }</b>
+&nbsp;
+<b class="nc">&nbsp;}</b>
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-09-01 15:35</div>
+</div>
+</body>
+</html>

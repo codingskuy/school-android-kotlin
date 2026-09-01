@@ -1,0 +1,263 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > WeatherState</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">io.codingskuy.weather_app.presentations.viewmodel</a>
+</div>
+
+<h1>Coverage Summary for Class: WeatherState (io.codingskuy.weather_app.presentations.viewmodel)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">WeatherState</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">WeatherState$Error</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherState$Idle</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherState$Loading</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">WeatherState$Success</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/5)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package io.codingskuy.weather_app.presentations.viewmodel
+&nbsp;
+&nbsp;import androidx.lifecycle.ViewModel
+&nbsp;import androidx.lifecycle.viewModelScope
+&nbsp;import dagger.hilt.android.lifecycle.HiltViewModel
+&nbsp;import io.codingskuy.weather_app.domain.entities.AirQuality
+&nbsp;import io.codingskuy.weather_app.domain.entities.Weather
+&nbsp;import io.codingskuy.weather_app.domain.usecase.GetAirQualityUseCase
+&nbsp;import io.codingskuy.weather_app.domain.usecase.GetCurrentWeatherUseCase
+&nbsp;import jakarta.inject.Inject
+&nbsp;import kotlinx.coroutines.flow.MutableStateFlow
+&nbsp;import kotlinx.coroutines.flow.asStateFlow
+&nbsp;import kotlinx.coroutines.launch
+&nbsp;
+<b class="nc">&nbsp;sealed class WeatherState {</b>
+<b class="nc">&nbsp;    data object Idle: WeatherState()</b>
+<b class="nc">&nbsp;    data object Loading: WeatherState()</b>
+<b class="nc">&nbsp;    data class Success(val data: Weather): WeatherState()</b>
+<b class="nc">&nbsp;    data class Error(val message: String): WeatherState()</b>
+&nbsp;}
+&nbsp;
+&nbsp;sealed class AirQualityState {
+&nbsp;    data object Idle: AirQualityState()
+&nbsp;    data object Loading: AirQualityState()
+&nbsp;    data class Success(val data: AirQuality): AirQualityState()
+&nbsp;    data class Error(val message: String): AirQualityState()
+&nbsp;}
+&nbsp;
+&nbsp;@HiltViewModel
+&nbsp;class WeatherViewModel @Inject constructor(
+&nbsp;    private val getCurrentWeatherUseCase: GetCurrentWeatherUseCase,
+&nbsp;    private val getAirQualityUseCase: GetAirQualityUseCase
+&nbsp;): ViewModel() {
+&nbsp;
+&nbsp;    private val _weatherState = MutableStateFlow&lt;WeatherState&gt;(WeatherState.Idle)
+&nbsp;    val weatherState = _weatherState.asStateFlow()
+&nbsp;
+&nbsp;    private val _airQualityState = MutableStateFlow&lt;AirQualityState&gt;(AirQualityState.Idle)
+&nbsp;    val airQualityState = _airQualityState.asStateFlow()
+&nbsp;
+&nbsp;    data class City(val name: String, val latitude: Double, val longitude: Double)
+&nbsp;    val cities = listOf(
+&nbsp;        City(&quot;Jakarta&quot;, -6.2088, 106.8456),
+&nbsp;        City(&quot;Bandung&quot;, -6.9175, 107.6191),
+&nbsp;        City(&quot;Surabaya&quot;, -7.2575, 112.7521),
+&nbsp;        City(&quot;Yogyakarta&quot;, -7.7956, 110.3695),
+&nbsp;        City(&quot;Medan&quot;, 3.5952, 98.6722),
+&nbsp;        City(&quot;Makassar&quot;, -5.1477, 119.4327),
+&nbsp;        City(&quot;Bali&quot;, -8.3405, 115.0920),
+&nbsp;    )
+&nbsp;
+&nbsp;    fun fetchWeather(city: City) {
+&nbsp;        viewModelScope.launch {
+&nbsp;            _weatherState.value = WeatherState.Loading
+&nbsp;
+&nbsp;            try {
+&nbsp;                val result = getCurrentWeatherUseCase(city.latitude, city.longitude)
+&nbsp;                _weatherState.value = WeatherState.Success(result)
+&nbsp;            } catch (e: Exception) {
+&nbsp;                _weatherState.value = WeatherState.Error(&quot;Gagal mengambil data: ${e.message}&quot;)
+&nbsp;            }
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    fun fetchAirQuality(city: City) {
+&nbsp;        viewModelScope.launch {
+&nbsp;            val result = getAirQualityUseCase(city.latitude, city.longitude)
+&nbsp;            _airQualityState.value = AirQualityState.Success(result)
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;    fun fetchAll(city: City) {
+&nbsp;        fetchWeather(city)
+&nbsp;        fetchAirQuality(city)
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-09-01 15:35</div>
+</div>
+</body>
+</html>

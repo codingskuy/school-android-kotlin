@@ -1,0 +1,157 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > MainActivity</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">io.codingskuy.weather_app</a>
+</div>
+
+<h1>Coverage Summary for Class: MainActivity (io.codingskuy.weather_app)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">MainActivity</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package io.codingskuy.weather_app
+&nbsp;
+&nbsp;import android.os.Bundle
+&nbsp;import androidx.activity.ComponentActivity
+&nbsp;import androidx.activity.compose.setContent
+&nbsp;import androidx.activity.enableEdgeToEdge
+&nbsp;import androidx.compose.foundation.layout.fillMaxSize
+&nbsp;import androidx.compose.foundation.layout.padding
+&nbsp;import androidx.compose.material3.Scaffold
+&nbsp;import androidx.compose.material3.Text
+&nbsp;import androidx.compose.runtime.Composable
+&nbsp;import androidx.compose.ui.Modifier
+&nbsp;import androidx.compose.ui.tooling.preview.Preview
+&nbsp;import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+&nbsp;import dagger.hilt.android.AndroidEntryPoint
+&nbsp;import io.codingskuy.weather_app.presentations.ui.WeatherScreen
+&nbsp;import io.codingskuy.weather_app.presentations.ui.theme.WeatherappTheme
+&nbsp;import io.codingskuy.weather_app.presentations.viewmodel.WeatherViewModel
+&nbsp;
+&nbsp;@AndroidEntryPoint
+<b class="nc">&nbsp;class MainActivity : ComponentActivity() {</b>
+&nbsp;    override fun onCreate(savedInstanceState: Bundle?) {
+<b class="nc">&nbsp;        super.onCreate(savedInstanceState)</b>
+<b class="nc">&nbsp;        enableEdgeToEdge()</b>
+<b class="nc">&nbsp;        setContent {</b>
+&nbsp;            val weatherViewModel: WeatherViewModel = hiltViewModel()
+&nbsp;            WeatherappTheme {
+&nbsp;                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding -&gt;
+&nbsp;                    WeatherScreen(
+&nbsp;                        weatherViewModel,
+&nbsp;                        modifier = Modifier.padding(innerPadding),
+&nbsp;                    )
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;@Composable
+&nbsp;fun Greeting(name: String, modifier: Modifier = Modifier) {
+&nbsp;    Text(
+&nbsp;        text = &quot;Hello $name!&quot;,
+&nbsp;        modifier = modifier
+&nbsp;    )
+&nbsp;}
+&nbsp;
+&nbsp;@Preview(showBackground = true)
+&nbsp;@Composable
+&nbsp;fun GreetingPreview() {
+&nbsp;    WeatherappTheme {
+&nbsp;        Greeting(&quot;Android&quot;)
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-09-01 15:35</div>
+</div>
+</body>
+</html>

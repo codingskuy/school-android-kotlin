@@ -1,0 +1,155 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > AirQualityResponse</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">io.codingskuy.weather_app.data.response</a>
+</div>
+
+<h1>Coverage Summary for Class: AirQualityResponse (io.codingskuy.weather_app.data.response)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AirQualityResponse</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/10)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package io.codingskuy.weather_app.data.response
+&nbsp;
+&nbsp;import com.google.gson.annotations.SerializedName
+&nbsp;
+<b class="nc">&nbsp;data class AirQualityResponse (</b>
+<b class="nc">&nbsp;    val latitude: Double ,</b>
+<b class="nc">&nbsp;    val longitude: Double ,</b>
+&nbsp;
+<b class="nc">&nbsp;    @SerializedName(&quot;generationtime_ms&quot;)</b>
+&nbsp;    val generationtimeMs: Double ,
+&nbsp;
+<b class="nc">&nbsp;    @SerializedName(&quot;utc_offset_seconds&quot;)</b>
+&nbsp;    val utcOffsetSeconds: Long ,
+&nbsp;
+<b class="nc">&nbsp;    val timezone: String ,</b>
+&nbsp;
+<b class="nc">&nbsp;    @SerializedName(&quot;timezone_abbreviation&quot;)</b>
+&nbsp;    val timezoneAbbreviation: String ,
+&nbsp;
+<b class="nc">&nbsp;    val elevation: Long ,</b>
+&nbsp;
+<b class="nc">&nbsp;    @SerializedName(&quot;current_units&quot;)</b>
+&nbsp;    val currentUnits: AirQualityCurrentUnits ,
+&nbsp;
+<b class="nc">&nbsp;    val current: AirQualityCurrent </b>
+&nbsp;)
+&nbsp;
+&nbsp;data class AirQualityCurrent (
+&nbsp;    val time: String ,
+&nbsp;    val interval: Long ,
+&nbsp;    val pm10: Double ,
+&nbsp;
+&nbsp;    @SerializedName(&quot;pm2_5&quot;)
+&nbsp;    val pm25: Double ,
+&nbsp;
+&nbsp;    @SerializedName(&quot;carbon_monoxide&quot;)
+&nbsp;    val carbonMonoxide: Double 
+&nbsp;)
+&nbsp;
+&nbsp;data class AirQualityCurrentUnits (
+&nbsp;    val time: String ,
+&nbsp;    val interval: String ,
+&nbsp;    val pm10: String ,
+&nbsp;
+&nbsp;    @SerializedName(&quot;pm2_5&quot;)
+&nbsp;    val pm25: String ,
+&nbsp;
+&nbsp;    @SerializedName(&quot;carbon_monoxide&quot;)
+&nbsp;    val carbonMonoxide: String 
+&nbsp;)
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2026-09-01 15:35</div>
+</div>
+</body>
+</html>

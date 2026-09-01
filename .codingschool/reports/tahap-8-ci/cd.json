@@ -1,0 +1,17 @@
+{
+  "assessments": [
+    {
+      "date": "2026-09-01T15:46:20.194Z",
+      "rubric": {
+        "theory": 75,
+        "logic": 85,
+        "coding": 60,
+        "communication": 65,
+        "bestPractice": 60,
+        "total": 69,
+        "weakness": "No code examples or implementation of Tahap 8 CI/CD. Try including code snippets to strengthen your argument.",
+        "feedback": "Sharp analysis! Compare with other approaches to broaden your perspective."
+      }
+    }
+  ]
+}
