@@ -19,6 +19,7 @@ hilt = "2.59.2"
 hiltNavigationCompose = "1.4.0"
 ksp = "2.2.10-2.0.2"
 robolectric = "4.16.1"
+navigationCompose = "2.10.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -47,6 +48,7 @@ hilt-navigation-compose = {group = "androidx.hilt", name = "hilt-navigation-comp
 mockk = {group = "io.mockk", name = "mockk", version.ref = "mockk"}
 turbine = {group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
 robolectric = { group = "org.robolectric", name ="robolectric", version.ref = "robolectric" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

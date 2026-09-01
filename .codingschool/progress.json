@@ -45,7 +45,8 @@
         "Task: Rename package wheater_app → weather_app",
         "Proyek 5: Aplikasi Cuaca",
         "Room Database",
-        "Proyek 6: Catatan Harian"
+        "Proyek 6: Catatan Harian",
+        "Unit Testing"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -63,13 +64,14 @@
         "Task: Rename package wheater_app → weather_app",
         "Proyek 5: Aplikasi Cuaca",
         "Room Database",
-        "Proyek 6: Catatan Harian"
+        "Proyek 6: Catatan Harian",
+        "Unit Testing"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Proyek 6: Catatan Harian",
+      "lastCompletedItem": "Unit Testing",
       "currentItem": null
     }
   },
@@ -79,6 +81,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 1200,
+  "xp": 1250,
   "level": 2
 }

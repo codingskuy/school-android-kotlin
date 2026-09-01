@@ -1,9 +1,4 @@
-# Roadmap: Android Development dengan Kotlin — Production-Ready (Compose-First + XML Literacy)
-
-Gaya belajar: **project-based** — setiap konsep langsung dipraktikkan jadi app nyata.
-Strategi utama (berdasarkan riset industri 2026):
-- 🎯 **Jetpack Compose = skill utama** — standar industri untuk semua proyek baru (rekomendasi resmi Google).
-- 🧩 **XML = literasi wajib** — jutaan app legacy masih pakai XML; kamu harus bisa baca & rawat kode lama, tapi nggak perlu jadi master.
+# Roadmap: Android Development dengan Kotlin
 
 ## 🎯 Tahap 1: Proyek Pertama — "Kalkulator Tip" (Jetpack Compose)
 - [x] **Jetpack Compose Dasar** — Text, Button, state (`remember`/`mutableStateOf`). UI deklaratif: kita deskripsikan "UI harus seperti apa", bukan "bagaimana membuatnya" step-by-step.
@@ -39,15 +34,17 @@ Strategi utama (berdasarkan riset industri 2026):
 - [x] **Proyek 6: Catatan Harian** 🚀 — tulis, edit, hapus catatan tersimpan di database.
 
 ## 🧪 Tahap 7: Testing — "Jangan takut merusak kode"
-- [ ] **Unit Testing** — JUnit + test ViewModel & repository (logic bener).
+- [x] **Unit Testing** — JUnit + test ViewModel & repository (logic bener).
 - [ ] **UI Testing** — Compose UI Test (tombol bisa diklik, tampilan muncul).
-- [ ] **Proyek 7: Tambah Testing ke To-Do List** 🚀 — cover logic utama + 2-3 UI test.
+- [ ] **Regression Testing** — strategi jalankan SEMUA test lama tiap perubahan (Unit + UI) untuk deteksi bongkaran. Bukan jenis test baru, tapi kebiasaan pro. Praktik: ubah entity → lihat test lama merah → betulin.
+- [ ] **Proyek 7: Tambah Testing ke To-Do List** 🚀 — cover logic utama + 2-3 UI test + 1 regression run (ubah 1 field → lihat semua test jalan).
 
 ## 🤖 Tahap 8: CI/CD — Deploy Otomatis (senjata andalanmu)
 - [ ] **GitHub Actions: Build Otomatis** — tiap `git push`, workflow otomatis compile project.
+- [ ] **Regression Otomatis via CI (Quality Gate)** — tiap push/PR, robot CI jalanin SEMUA test (Unit + UI) sebagai regression. Kalau merah / coverage turun → PR ditolak. Ini regression yang kamu tanya!
 - [ ] **Firebase App Distribution (App Tester)** — hasil build otomatis dikirim ke tester, lengkap dengan catatan rilis. Tester install lewat app "Firebase App Tester" — nggak perlu USB.
 - [ ] **Signing & Release** — signed APK/AAB, versioning (semantic version), siap distribusi.
-- [ ] **Proyek 8: Pipeline CI/CD To-Do List** 🚀 — push → GitHub Actions build → otomatis ter-deploy ke Firebase App Tester. Ini yang bakal kamu demo-in di wawancara!
+- [ ] **Proyek 8: Pipeline CI/CD To-Do List** 🚀 — push → GitHub Actions build + regression test → otomatis ter-deploy ke Firebase App Tester. Ini yang bakal kamu demo-in di wawancara!
 
 ## 🏆 Tahap 9: Proyek Portofolio Final
-- [ ] **Proyek Final: App Portofolio** 🏆 — kamu pilih ide sendiri. Wajib: arsitektur clean, testing, CI/CD ke Firebase. Inilah bukti "aku siap kerja".
+- [ ] **Proyek Final: App Portofolio** 🏆 — kamu pilih ide sendiri. Wajib: arsitektur clean, testing, regression, CI/CD ke Firebase. Inilah bukti "aku siap kerja".

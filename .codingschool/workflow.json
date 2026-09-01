@@ -12,7 +12,8 @@
       "Unit Testing"
     ],
     "roadmapTopics": [
-      "Android development dengan Kotlin"
+      "Android development dengan Kotlin",
+      "android development dengan kotlin"
     ],
     "taughtTopics": [
       "Android development dengan Kotlin",
@@ -21,7 +22,8 @@
       "Clean Architecture",
       "Android Networking dengan Retrofit",
       "Room Database",
-      "Unit Testing"
+      "Unit Testing",
+      "android development dengan kotlin"
     ],
     "assessedTopics": [
       "RecyclerView & Adapter"
@@ -46,5 +48,5 @@
     }
   },
   "lastTool": "cs_teach_concept",
-  "updatedAt": "2026-08-30T17:22:01.402Z"
+  "updatedAt": "2026-08-31T16:24:21.153Z"
 }

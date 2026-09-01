@@ -611,3 +611,16 @@ notes-app: buat NoteEntity, NoteDao (fix OnConflictStrategy import & return type
 **Progress:** 100% complete
 
 ---
+## 2026-08-31 23:24:18
+
+**Topic:** Unit Testing
+
+**Theory:**
+Unit Testing = test 1 fungsi/logic terisolasi dengan mock/fake. Mock = boneka remote control (mockk) yang diatur coEvery & diverify, Fake = duplikat mini yang jalan beneran (inMemory). TDD = RED (test gagal/compile error karena code belum ada) -> GREEN (bikin code minimal biar hijau) -> REFACTOR (rapikan nama). Robot CI + coverage gate cegah regression.
+
+**Practice:**
+weather-app TDD air-quality: buat domain AirQuality, AirQualityRepository, GetAirQualityUseCase -> test UseCase RED->GREEN, buat data AirQualityResponse/Current + AirQualityApi + AirQualityRepositoryImpl mapping -> test Repository RED->GREEN (fix Any() & pm2_5 naming), ViewModel test GREEN langsung (sudah ada fetchAirQuality). Fix typo aapi->api. Semua test passed. Paham mock vs fake, expectedData naming.
+
+**Progress:** 100% complete
+
+---

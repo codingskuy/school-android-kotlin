@@ -23,7 +23,7 @@ import io.codingskuy.weather_app.presentations.viewmodel.WeatherViewModel
 
 @Composable
 fun WeatherScreen(
-    viewModel: WeatherViewModel, modifier: Modifier = Modifier
+    viewModel: WeatherViewModel, modifier: Modifier = Modifier, onWeatherClick: () -> Unit = {}
 ) {
 
     val state by viewModel.weatherState.collectAsState()
@@ -82,7 +82,9 @@ fun WeatherScreen(
             is WeatherState.Success -> {
                 val data = currentState.data
                 Card(
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable{onWeatherClick()}
                 ) {
                     Column(
                         modifier = Modifier.padding(16.dp)

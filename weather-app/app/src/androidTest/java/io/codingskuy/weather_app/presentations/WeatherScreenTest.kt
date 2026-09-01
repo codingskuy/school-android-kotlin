@@ -5,9 +5,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import io.codingskuy.weather_app.domain.entities.AirQuality
 import io.codingskuy.weather_app.domain.entities.Weather
-import io.codingskuy.weather_app.domain.repository.AirQualityRepository
 import io.codingskuy.weather_app.domain.repository.WeatherRepository
 import io.codingskuy.weather_app.domain.usecase.GetAirQualityUseCase
 import io.codingskuy.weather_app.domain.usecase.GetCurrentWeatherUseCase
@@ -32,7 +30,7 @@ class WeatherScreenTest {
         )
 
         // When: Tampilkan layar
-        composeRule.setContent { WeatherScreen(viewModel = vm) }
+        composeRule.setContent { WeatherScreen(viewModel = vm,) }
 
         // Then: harus ada teks "Pilih kota untuk melihat cuaca!"
         composeRule.onNodeWithText("Pilih kota untuk melihat cuaca!").assertIsDisplayed()
@@ -55,7 +53,7 @@ class WeatherScreenTest {
             GetAirQualityUseCase(FakeAirRepo())
         )
 
-        composeRule.setContent { WeatherScreen(vm) }
+        composeRule.setContent { WeatherScreen(vm,) }
 
         composeRule.onNodeWithText("Yogyakarta").performClick()
         composeRule.waitUntil(timeoutMillis = 3000) {
@@ -71,7 +69,7 @@ class WeatherScreenTest {
             GetAirQualityUseCase(FakeAirRepo())
         )
 
-        composeRule.setContent { WeatherScreen(vm) }
+        composeRule.setContent { WeatherScreen(vm,) }
 
         composeRule.onNodeWithText("Yogyakarta").performClick()
         composeRule.waitUntil(timeoutMillis = 3000) {
@@ -93,14 +91,5 @@ class FakeWeatherRepo(
             30.0, "°C", 60, "%", 0, "wmo", "2026-08-31", "iso", "GMT",
             "GMT"
         )
-    }
-}
-class FakeAirRepo(
-    private val shouldFail: Boolean = false
-) : AirQualityRepository {
-    override suspend fun getAirQuality(lat: Double, lng: Double): AirQuality {
-        if(shouldFail) throw Exception("Gagal mengambil cuaca")
-
-        return AirQuality(20.0, 10.0, 500.0)
     }
 }
