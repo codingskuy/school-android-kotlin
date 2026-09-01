@@ -23,7 +23,8 @@ import io.codingskuy.weather_app.presentations.viewmodel.WeatherViewModel
 
 @Composable
 fun WeatherScreen(
-    viewModel: WeatherViewModel, modifier: Modifier) {
+    viewModel: WeatherViewModel, modifier: Modifier = Modifier
+) {
 
     val state by viewModel.weatherState.collectAsState()
 

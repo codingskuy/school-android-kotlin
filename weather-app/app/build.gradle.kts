@@ -73,9 +73,11 @@ dependencies {
 
     // unit test
     testImplementation(libs.mockk)
-    testImplementation(libs.turbine)
     testImplementation(libs.robolectric)
-    implementation(libs.androidx.test)
-    androidTestImplementation(libs.androidx.test)
     testImplementation(libs.kotlinx.coroutines.test)
+
+
+    // ui test
+    androidTestImplementation(libs.androidx.test)
+    androidTestImplementation(libs.kotlinx.coroutines.android)
 }
