@@ -74,6 +74,7 @@ dependencies {
     // unit test
     testImplementation(libs.mockk)
     testImplementation(libs.robolectric)
+    testImplementation(libs.turbine)
     testImplementation(libs.kotlinx.coroutines.test)
 
 
