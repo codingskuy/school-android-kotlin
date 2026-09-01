@@ -718,3 +718,18 @@ Regression Testing bukan jenis test baru - strategi jalankan semua test lama tia
 **Progress:** 100% complete
 
 ---
+## 2026-09-01 22:48:22
+
+**Topic:** Proyek Final: App Portofolio
+
+**Theory:** Portofolio final = bukti siap kerja, wajib clean architecture + testing + regression + CI/CD.
+
+**Practice (claim impas, Tahap 8 quiz 69/100, Proyek 7 impas via weather-app):**
+- Weather App: Clean Architecture (domain/data/presentation), Hilt, Retrofit (forecast + air-quality), StateFlow sealed class, Kover, 4 unit + 5 UI tests, qa-regression.sh (--auto/generic/branch) + regression report, Kover coverage
+- Notes App: Room DB v2 + migration, UseCases terpisah, ViewModel + Flow
+- CI/CD: GitHub Actions build, Quality Gate (regression otomatis), Firebase App Distribution, Signing keystore + semantic versioning (pernah setup docker image CI/CD)
+- Dianggap impas untuk Proyek Final karena koleksi weather-app + notes-app sudah memenuhi kriteria portofolio production-grade. XP 1650 -> 1700.
+
+**Progress:** 100% complete
+
+---

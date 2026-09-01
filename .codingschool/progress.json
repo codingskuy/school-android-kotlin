@@ -54,7 +54,8 @@
         "Regression Otomatis via CI (Quality Gate)",
         "Firebase App Distribution (App Tester)",
         "Signing & Release",
-        "Proyek 8: Pipeline CI/CD To-Do List"
+        "Proyek 8: Pipeline CI/CD To-Do List",
+        "Proyek Final: App Portofolio"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -81,13 +82,14 @@
         "Regression Otomatis via CI (Quality Gate)",
         "Firebase App Distribution (App Tester)",
         "Signing & Release",
-        "Proyek 8: Pipeline CI/CD To-Do List"
+        "Proyek 8: Pipeline CI/CD To-Do List",
+        "Proyek Final: App Portofolio"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Proyek 8: Pipeline CI/CD To-Do List",
+      "lastCompletedItem": "Proyek Final: App Portofolio",
       "currentItem": null
     }
   },
@@ -97,6 +99,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 1650,
+  "xp": 1700,
   "level": 2
 }

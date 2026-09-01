@@ -47,4 +47,4 @@
 - [x] **Proyek 8: Pipeline CI/CD To-Do List** 🚀 — push → GitHub Actions build + regression test → otomatis ter-deploy ke Firebase App Tester. Ini yang bakal kamu demo-in di wawancara!
 
 ## 🏆 Tahap 9: Proyek Portofolio Final
-- [ ] **Proyek Final: App Portofolio** 🏆 — kamu pilih ide sendiri. Wajib: arsitektur clean, testing, regression, CI/CD ke Firebase. Inilah bukti "aku siap kerja".
+- [x] **Proyek Final: App Portofolio** 🏆 — kamu pilih ide sendiri. Wajib: arsitektur clean, testing, regression, CI/CD ke Firebase. Inilah bukti "aku siap kerja".
