@@ -91,6 +91,18 @@
       "currentBloomStage": null,
       "lastCompletedItem": "Proyek Final: App Portofolio",
       "currentItem": null
+    },
+    "modular architecture android": {
+      "name": "modular architecture android",
+      "percent": 0,
+      "theory": [],
+      "practice": [],
+      "quizzes": [],
+      "completedTheory": [],
+      "completedPractice": [],
+      "currentItem": null,
+      "lastCompletedItem": null,
+      "currentBloomStage": null
     }
   },
   "global": {

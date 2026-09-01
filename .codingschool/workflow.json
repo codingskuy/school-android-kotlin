@@ -13,7 +13,8 @@
     ],
     "roadmapTopics": [
       "Android development dengan Kotlin",
-      "android development dengan kotlin"
+      "android development dengan kotlin",
+      "modular architecture android"
     ],
     "taughtTopics": [
       "Android development dengan Kotlin",
@@ -48,6 +49,6 @@
       "Task Form Tambah Hapus": "closed"
     }
   },
-  "lastTool": "cs_publish_handbook",
-  "updatedAt": "2026-09-01T15:49:08.102Z"
+  "lastTool": "cs_create_roadmap",
+  "updatedAt": "2026-09-01T15:51:00.238Z"
 }
