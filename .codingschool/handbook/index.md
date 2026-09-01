@@ -1,6 +1,6 @@
 # CodingSchool — Learning Notes
 
-> Updated: 2026-08-31
+> Updated: 2026-09-01
 
 ## Topics
 

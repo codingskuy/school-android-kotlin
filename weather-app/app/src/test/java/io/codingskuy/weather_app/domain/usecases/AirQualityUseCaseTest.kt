@@ -9,9 +9,6 @@ import kotlinx.coroutines.test.runTest
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
-
-@RunWith(RobolectricTestRunner::class)
 class AirQualityUseCaseTest {
     private val mockRepo = mockk<AirQualityRepository>()
     private val useCase = GetAirQualityUseCase(mockRepo)

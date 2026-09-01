@@ -35,8 +35,8 @@
 
 ## 🧪 Tahap 7: Testing — "Jangan takut merusak kode"
 - [x] **Unit Testing** — JUnit + test ViewModel & repository (logic bener).
-- [ ] **UI Testing** — Compose UI Test (tombol bisa diklik, tampilan muncul).
-- [ ] **Regression Testing** — strategi jalankan SEMUA test lama tiap perubahan (Unit + UI) untuk deteksi bongkaran. Bukan jenis test baru, tapi kebiasaan pro. Praktik: ubah entity → lihat test lama merah → betulin.
+- [x] **UI Testing** — Compose UI Test (tombol bisa diklik, tampilan muncul).
+- [x] **Regression Testing** — strategi jalankan SEMUA test lama tiap perubahan (Unit + UI) untuk deteksi bongkaran. Bukan jenis test baru, tapi kebiasaan pro. Praktik: ubah entity → lihat test lama merah → betulin.
 - [ ] **Proyek 7: Tambah Testing ke To-Do List** 🚀 — cover logic utama + 2-3 UI test + 1 regression run (ubah 1 field → lihat semua test jalan).
 
 ## 🤖 Tahap 8: CI/CD — Deploy Otomatis (senjata andalanmu)

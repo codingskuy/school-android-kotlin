@@ -624,3 +624,29 @@ weather-app TDD air-quality: buat domain AirQuality, AirQualityRepository, GetAi
 **Progress:** 100% complete
 
 ---
+## 2026-09-01 16:21:45
+
+**Topic:** Regression Testing
+
+**Theory:**
+Regression = jalanin SEMUA test lama tiap perubahan (sebelum PR) untuk deteksi bongkaran. Quality Gate di CI. Bukan jenis test baru, tapi strategi. Test 5 passed di weather-app, coverage Kover, AirQuality TDD, ViewModel test dengan UnconfinedTestDispatcher + Turbine (Idle->Success).
+
+**Practice:**
+weather-app: simulasi ubah entity -> test merah -> betulin -> hijau. Fix Kover: ganti Robolectric -> Kover, tambah Dispatchers.setMain(testDispatcher), UnconfinedTestDispatcher, turbine test dengan awaitItem 2 kali. Fix coroutines version mismatch 1.11.0 -> 1.8.1. Regression run ./gradlew test -> 5 passed.
+
+**Progress:** 100% complete
+
+---
+## 2026-09-01 16:21:56
+
+**Topic:** UI Testing
+
+**Theory:**
+UI Testing = robot ComposeTestRule yang cari node pakai text/testTag dan performClick/assertIsDisplayed. Beda test vs androidTest: testImplementation untuk JVM, androidTestImplementation untuk HP. Mock vs Fake: mock untuk unit, fake untuk UI (ViewModel pre-requirement). Delay di Fake untuk simulasi loading.
+
+**Practice:**
+weather-app: buat WeatherScreenTest & AirQualityScreenTest dengan createComposeRule, FakeWeatherRepo/FakeAirRepo dengan delay, test tap city -> Loading -> Success/Error, test navigasi Success card -> AirQualityScreen. Fix: tambah androidTestImplementation mockk/turbine/coroutines, hapus robolectric dari androidTest, fix coroutines version 1.11.0->1.8.1 + kotlinx-coroutines-android, fix Fake delay dan waitUntil, fix mock->fake, fix PM2.5 naming, fix navigation onSuccessClick.
+
+**Progress:** 100% complete
+
+---

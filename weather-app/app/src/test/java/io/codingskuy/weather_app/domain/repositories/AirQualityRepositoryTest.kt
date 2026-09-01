@@ -11,9 +11,6 @@ import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
-
-@RunWith(RobolectricTestRunner::class)
 class AirQualityRepositoryTest {
     private val mockApi = mockk<AirQualityApi>()
     private val repo = AirQualityRepositoryImpl(mockApi)

@@ -46,7 +46,9 @@
         "Proyek 5: Aplikasi Cuaca",
         "Room Database",
         "Proyek 6: Catatan Harian",
-        "Unit Testing"
+        "Unit Testing",
+        "Regression Testing",
+        "UI Testing"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -65,13 +67,15 @@
         "Proyek 5: Aplikasi Cuaca",
         "Room Database",
         "Proyek 6: Catatan Harian",
-        "Unit Testing"
+        "Unit Testing",
+        "Regression Testing",
+        "UI Testing"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "Unit Testing",
+      "lastCompletedItem": "UI Testing",
       "currentItem": null
     }
   },
@@ -81,6 +85,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 1250,
+  "xp": 1350,
   "level": 2
 }
