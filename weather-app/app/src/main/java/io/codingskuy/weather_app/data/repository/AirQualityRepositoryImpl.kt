@@ -13,7 +13,7 @@ class AirQualityRepositoryImpl(
     ): AirQuality {
         val response = api.getAirQuality(latitude, longitude)
         return AirQuality(
-            pm10 = response.current.pm10 / 1000,
+            pm10 = response.current.pm10,
             pm25 = response.current.pm25,
             carbonMonoxide = response.current.carbonMonoxide
         )

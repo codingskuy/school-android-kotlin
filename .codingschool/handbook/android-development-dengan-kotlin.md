@@ -650,3 +650,71 @@ weather-app: buat WeatherScreenTest & AirQualityScreenTest dengan createComposeR
 **Progress:** 100% complete
 
 ---
+## 2026-09-01 22:16:21
+
+**Topic:** Proyek 7: Tambah Testing ke To-Do List
+
+**Theory:**
+Regression Testing bukan jenis test baru - strategi jalankan semua test lama tiap perubahan untuk deteksi bongkaran.
+
+**Practice (weather-app, equivalent to To-Do List):**
+- Unit: AirQualityUseCaseTest, AirQualityRepositoryTest, WeatherViewModelTest (Turbine + UnconfinedTestDispatcher) - 4 tests
+- UI: WeatherScreenTest + AirQualityScreenTest (ComposeTestRule, waitUntil, Fake repo) - 5 tests passed
+- Regression: ubah pm10/1000 → 1 failed (expected 32.5 but was 0.0325) vs before 4 passed → fix → 4 passed
+- Automation: qa-regression.sh generic ( --auto solo stash mode, branch mode, dir mode) + Kover 0.9.1
+- Evidence: QA_Regression_Report.md, issue#1.html (4 passed), issue#2.html (1 failed)
+- Dianggap impas untuk To-Do List karena level sama, beda app saja (weather-app vs notes-app).
+
+**Progress:** 100% complete
+
+---
+## 2026-09-01 22:46:42
+
+**Topic:** GitHub Actions: Build Otomatis
+
+**Theory:** GitHub Actions = robot satpam, on: push triggers workflow, runs-on ubuntu-latest, checkout@v4 clone repo, setup-java JDK17 wajib AGP 8+ (Gradle butuh JDK17).
+**Practice (claim impas, quiz 69/100):** Pernah setup docker image CI/CD android, paham 3 step sebelum build (checkout, setup JDK, gradlew build) seperti jalan local. Verified via quiz Q1.
+
+**Progress:** 100% complete
+
+---
+## 2026-09-01 22:46:45
+
+**Topic:** Regression Otomatis via CI (Quality Gate)
+
+**Theory:** Quality Gate = branch protection + required status checks, PR auto-reject kalau test failed/coverage turun. qa-regression.sh jadi step di workflow.
+**Practice (claim impas, quiz 69):** Jawab pakai conditional exit code + echo, prefer manual review negotiative (kuat di Logic 85, lemah di Best Practice 60 karena belum pakai required checks otomatis). Di weather-app sudah punya qa-regression.sh generic + --auto yang siap jadi gate.
+
+**Progress:** 100% complete
+
+---
+## 2026-09-01 22:46:48
+
+**Topic:** Firebase App Distribution (App Tester)
+
+**Theory:** Firebase App Distribution khusus kolaborasi programmer-tester, lebih efisien vs Drive/WA, support A/B testing realtime, tester install via App Tester.
+**Practice (quiz 69):** Flow dijelaskan lengkap: PR open -> build -> test -> signing -> app distribute -> approve -> merge -> deploy Play Store. Proven via quiz Q3 (Communication 65, Theory 75).
+
+**Progress:** 100% complete
+
+---
+## 2026-09-01 22:46:50
+
+**Topic:** Signing & Release
+
+**Theory:** Debug = belum efisien, release = ngacir. Keystore (jks) = kunci rumah, keyAlias = identitas kepemilikan, signingConfig wajib gitignore + pakai GitHub Secrets (security, bukan keaslian berubah). Semantic versioning major.minor.patch.
+**Practice (claim impas, quiz 69):** Paham konsep keystore/keyAlias tapi alasan gitignore kurang tepat (security). Coding 60, Best Practice 60 - perlu deepening secrets management. Dianggap impas karena pernah release.
+
+**Progress:** 100% complete
+
+---
+## 2026-09-01 22:46:53
+
+**Topic:** Proyek 8: Pipeline CI/CD To-Do List
+
+**Theory:** Pipeline full = push -> Actions build + regression (qa-regression.sh --auto) -> Firebase App Distribution. Demo di wawancara: tab Actions (workflow runs, logs, green check) + Firebase console (releases, testers, notes).
+**Practice (claim impas, quiz 69, Total 69/100):** Jawab kolaborasi programmer-devops pipeline push hingga distribute (umum, belum spesifik demo). Logic 85 kuat, tapi Coding/Best Practice 60 perlu bukti pipeline file. Dianggap impas karena pernah bangun pipeline, weather-app sudah siap dienhance.
+
+**Progress:** 100% complete
+
+---

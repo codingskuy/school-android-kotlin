@@ -1,5 +1,5 @@
 {
-  "currentPhase": "teach",
+  "currentPhase": "project",
   "teacher": {
     "misconceptions": [],
     "successfulHintLevel": 1,
@@ -25,8 +25,18 @@
       "projectName": "Proyek 6: Catatan Harian",
       "topic": "android development dengan kotlin",
       "summary": "Catatan Harian selesai: Room Entity/Dao/Database + Hilt AppModule (Room.databaseBuilder singleton), domain Note + NoteRepository Flow, 4 UseCases terpisah @Inject, NoteViewModel @HiltViewModel dengan notes StateFlow + selectedNote, UI Compose NoteListScreen LazyColumn key id + AddNoteDialog remember state + delete IconButton, MainActivity @AndroidEntryPoint hiltViewModel. Build success, code review 71/100, GRC medium (Room parameterized queries aman)."
+    },
+    "pendingCapstone": {
+      "topic": "android development dengan kotlin",
+      "items": [
+        "**Proyek 7: Tambah Testing ke To-Do List** 🚀 — cover logic utama + 2-3 UI test + 1 regression run (ubah 1 field → lihat semua test jalan)."
+      ],
+      "ready": true,
+      "type": "phase",
+      "projectName": "Proyek 7: Tambah Testing ke To-Do List",
+      "phaseLabel": "Tahap 7"
     }
   },
-  "updatedAt": "2026-08-30T17:21:57.884Z",
+  "updatedAt": "2026-09-01T15:14:09.060Z",
   "activeTopic": "Unit Testing"
 }

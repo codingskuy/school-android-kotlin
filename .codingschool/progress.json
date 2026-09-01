@@ -48,7 +48,13 @@
         "Proyek 6: Catatan Harian",
         "Unit Testing",
         "Regression Testing",
-        "UI Testing"
+        "UI Testing",
+        "Proyek 7: Tambah Testing ke To-Do List",
+        "GitHub Actions: Build Otomatis",
+        "Regression Otomatis via CI (Quality Gate)",
+        "Firebase App Distribution (App Tester)",
+        "Signing & Release",
+        "Proyek 8: Pipeline CI/CD To-Do List"
       ],
       "completedTheory": [
         "Navigation Compose",
@@ -69,13 +75,19 @@
         "Proyek 6: Catatan Harian",
         "Unit Testing",
         "Regression Testing",
-        "UI Testing"
+        "UI Testing",
+        "Proyek 7: Tambah Testing ke To-Do List",
+        "GitHub Actions: Build Otomatis",
+        "Regression Otomatis via CI (Quality Gate)",
+        "Firebase App Distribution (App Tester)",
+        "Signing & Release",
+        "Proyek 8: Pipeline CI/CD To-Do List"
       ],
       "practice": [],
       "completedPractice": [],
       "quizzes": [],
       "currentBloomStage": null,
-      "lastCompletedItem": "UI Testing",
+      "lastCompletedItem": "Proyek 8: Pipeline CI/CD To-Do List",
       "currentItem": null
     }
   },
@@ -85,6 +97,6 @@
     "practice": 100,
     "architecture": 50
   },
-  "xp": 1350,
+  "xp": 1650,
   "level": 2
 }
